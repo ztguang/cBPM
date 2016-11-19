@@ -1,0 +1,106 @@
+<Roles>
+	<Role Key="SiteAdministrator">
+		<Name>Amministratore Sito</Name>
+		<Description>Amministratore del portatel.Tutte le funzionalita attivate.</Description>
+		<Users>
+			<User Key="scenario"></User>
+			<User Key="celentano"></User>
+		</Users>
+	</Role>
+	<Role Key="AccountAdministrator">
+		<Name>Amministratore Utenti e Ruoli</Name>
+		<Description></Description>
+		<Users>
+			<User Key="scenario"></User>
+			<User Key="celentano"></User>
+			<User Key="r.vitale"></User>
+		</Users>
+	</Role>
+	<Role Key="DG">
+		<Name>DG</Name>
+		<Description>Direzione Generale</Description>
+		<Users>
+			<User Key="e.vitale"></User>
+			<User Key="r.vitale"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="GQ">
+		<Name>GQ</Name>
+		<Description>Gestione Qualita</Description>
+		<Users>
+			<User Key="r.vitale"></User>
+			<User Key="scenario"></User>
+			<User Key="celentano"></User>
+		</Users>
+	</Role>
+	<Role Key="IMP">
+		<Name>IMP</Name>
+		<Description>Ufficio Tecnico</Description>
+		<Users>
+			<User Key="g.vitale"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="CM">
+		<Name>CM</Name>
+		<Description>Commerciale</Description>
+		<Users>
+			<User Key="e.pane"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="ANI">
+		<Name>ANI</Name>
+		<Description>Addetto agli acquisti</Description>
+		<Users>
+			<User Key="e.pane"></User>
+			<User Key="scenario"></User>
+			<User Key="r.vitale"></User>
+		</Users>
+	</Role>
+	<Role Key="ARM">
+		<Name>ARM</Name>
+		<Description>Addetto agli acquisti</Description>
+		<Users>
+			<User Key="a.pastore"></User>
+			<User Key="scenario"></User>
+			<User Key="r.vitale"></User>
+			<User Key="g.vitale"></User>
+		</Users>
+	</Role>
+	<Role Key="RC">
+		<Name>RC</Name>
+		<Description>Responsabile Commerciale</Description>
+		<Users>
+			<User Key="r.vitale"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="SG">
+		<Name>SG</Name>
+		<Description>Segreteria</Description>
+		<Users>
+			<User Key="a.santacroce"></User>
+			<User Key="s.esposito"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="PG">
+		<Name>PG</Name>
+		<Description>Progettista</Description>
+		<Users>
+			<User Key="g.vitale"></User>
+			<User Key="r.manna"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+	<Role Key="CT">
+		<Name>CT</Name>
+		<Description>Capo Tecnico</Description>
+		<Users>
+			<User Key="g.vitale"></User>
+			<User Key="scenario"></User>
+		</Users>
+	</Role>
+</Roles>

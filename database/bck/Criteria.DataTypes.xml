@@ -1,0 +1,852 @@
+<DataTypes>
+	<DataType Key='FormHelperActions' Type='STRING'>
+		<Description>Action preconfigured in FormHelper Configuration File.</Description>
+		<EnumerationValues>
+			<Value Key="Basic">Basic</Value>
+		</EnumerationValues>
+	</DataType>
+	<DataType Key='ApplicationWAPI' Type='INTEGER'>
+		 <Description>ApplicationWAPI</Description>
+		 <EnumerationValues>
+		 	<Value Key="OK">0</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='OK-KO' Type='BOOL'>
+		 <Description>Bolean result</Description>
+		 <EnumerationValues>
+		 	<Value Key="KO">False</Value>
+		 	<Value Key="OK">True</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='RNI_Namespaces' Type='String'>
+		<Description>Bolean result</Description>
+		 <EnumerationValues>
+		 	<Value Key="my">http://schemas.microsoft.com/office/infopath/2003/myXSD/2006-10-05T10:51:08</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='BOOLEAN' Type='BOOL'>
+		 <Description>Bolean result</Description>
+		 <EnumerationValues>
+		 	<Value Key="Zero">0</Value>
+		 	<Value Key="Uno">1</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='ProcessStarter' Type='STRING'>
+		<Description>Who start the process</Description>
+			<EnumerationValues>
+		 		<Value Key="USER">USER</Value>
+		 		<Value Key="PROCESS">PROCESS</Value>
+			</EnumerationValues>
+	</DataType>
+	
+	<DataType Key='DocumentType' Type='STRING'>
+		 <Description>DocumentType</Description>
+		 <EnumerationValues>
+		 	<Value Key="FNI">FNI</Value>
+		 	<Value Key="CCM">CCM</Value>
+		 	<Value Key="COC">COC</Value>
+		 	<Value Key="DMS">DMS</Value>
+		 	<Value Key="LCA">LCA</Value>
+		 	<Value Key="LCC">LCC</Value>
+		 	<Value Key="LCO">LCO</Value>
+		 	<Value Key="MEP">MEP</Value>
+		 	<Value Key="ODA">ODA</Value>
+		 	<Value Key="OFF">OFF</Value>
+		 	<Value Key="OLC">OLC</Value>
+		 	<Value Key="RNI">RNI</Value>
+		 	<Value Key="SIE">SIE</Value>
+		 	<Value Key="SIO">SIO</Value>
+		 	<Value Key="VCI">VCI</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='ProcessAlias' Type='ALL'>
+		<EnumerationValues>
+		 	<Value Key="Acquisto Impianto">Acquisto Impianto</Value>
+		 	<Value Key="Acquisto Materiali e Servizi">Acquisto Materiali e Servizi</Value>
+		 	<Value Key="Installazione e Montaggio">Installazione e Montaggio</Value>
+		 	<Value Key="Gestione Anomalia">Gestione Anomalia</Value>
+			<Value Key="Vendita Impianto">Vendita Impianto</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='KPI' Type='ALL'>
+		<EnumerationValues>
+		 	<Value Key="DURATA">DURATA</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	
+	
+	<DataType Key='ACEM' Type='ALL'>
+		<EnumerationValues>
+		 	<Value Key="ConnectionString">Database=acem;Data Source=127.0.0.1;User Id=acem;Password=acem</Value>
+		 	<!--Value Key="TeraTermConnectionString">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Inetpub\wwwroot\ACEMPortal\ACEM\Infopath\Modules\COMMERCIALE.mdb</Value-->
+		 	<Value Key="TeraTermConnectionString">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Acem\\ARC\\COMMERCIALE.mdb</Value>
+		 	<Value Key="SupportRole">Support</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='Anomalia' Type='ALL'>
+		<EnumerationValues>
+		 	<Value Key="TestoAzienda">ACEM s.r.l. - Via Clanio 6/8 - 81100 Caserta (CE) - Tel. +39 0823.423642 - Fax +39 0823.452649</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	
+	<DataType Key='DataBase' Type='ALL'>
+		<EnumerationValues>
+		 	<Value Key="ConnectionString">Database=acem;Data Source=127.0.0.1;User Id=acem;Password=acem</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='Partecipants' Type='Partecipants'>
+	</DataType>
+	<DataType Key='WorkflowProcesses' Type='WorkflowProcesses'>
+	</DataType>
+	<DataType Key='SubflowExecution' Type='SubflowExecution'>
+		<EnumerationValues>
+		 	<Value Key="Sequential">SEQUENCE</Value>
+		 	<Value Key="Concurrent">CONCURRENT</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='Number' Type='Number'>
+		<EnumerationValues>
+		 </EnumerationValues>
+	</DataType>	
+	<DataType Key='XML' Type='XML'>
+	</DataType>
+	<DataType Key='STRING' Type='STRING'>
+	</DataType>
+	<DataType Key='SMTPHelper' Type='INTEGER'>
+		 <Description>SMTPHelper</Description>
+		 <EnumerationValues>
+		 	<Value Key="OK">0</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='ApplicationResult' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="Zero">0</Value>
+		 	<Value Key="ComFailure">1000</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='ProposalStatus' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="WAITING">0</Value>
+		 	<Value Key="ABORTED">1</Value>
+		 	<Value Key="CONFIRMED">2</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='KitPlantType' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="OLEODINAMICO">OLEODINAMICO</Value>
+		 	<Value Key="ELETTRICO">ELETTRICO</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='PlantWithProject' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="NO">NO</Value>
+		 	<Value Key="SI">SI</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='SupplyConfirmed' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="Positivo">Positivo</Value>
+		 	<Value Key="Negativo">Negativo</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='OrderManagement' Type='NUMBER'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="MakeODA">MakeODA</Value>
+		 	<Value Key="MakeLCA">MakeLCA</Value>
+		 	<Value Key="MakeRDO">MakeRDO</Value>
+		 	<Value Key="ProcessContinue">ProcessContinue</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='BuildingType' Type='STRING'>
+		 <Description>Tipologie di edificio</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="ESISTENTE">ESISTENTE</Value>
+		 	<Value Key="NUOVA COSTRUZIONE">NUOVA COSTRUZIONE</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='BuildingUse' Type='STRING'>
+		 <Description>Tipologie di destinazione di un edificio</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="CIVILE ABITAZIONE">CIVILE ABITAZIONE</Value>
+		 	<Value Key="UFFICI">UFFICI</Value>
+		 	<Value Key="COMMERCIALE">COMMERCIALE</Value>
+		 	<Value Key="STRUTTURA SOCIO SANITARIA">STRUTTURA SOCIO SANITARIA</Value>
+		 	<Value Key="PUBBLICO">PUBBLICO</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='PlantType' Type='STRING'>
+		 <Description>Tipologie di impianto</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="ACENSORE">ACENSORE</Value>
+		 	<Value Key="PIATTAFORMA ELEVATRICE">PIATTAFORMA ELEVATRICE</Value>
+		 	<Value Key="MONTACARICHI PER SOLE MERCI">MONTACARICHI PER SOLE MERCI</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='GateType' Type='STRING'>
+		 <Description>Tipologie di accessi impianto</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="UNO">UNO</Value>
+		 	<Value Key="DUE OPPOSTI">DUE OPPOSTI</Value>
+		 	<Value Key="DUE ADIACENTI">DUE ADIACENTI</Value>
+		 	<Value Key="TRE">TRE</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='PowerSupply' Type='STRING'>
+		 <Description>Valori di tensione</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="220V">220V</Value>
+		 	<Value Key="380V">380V</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='MachineRoomLocation' Type='STRING'>
+		 <Description>Localizzazione del locale macchine</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="IN BASSO A LATO">IN BASSO A LATO</Value>
+		 	<Value Key="IN BASSO ADIACENTE AL VANO CORSA">IN BASSO ADIACENTE AL VANO CORSA</Value>
+		 	<Value Key="IN ALTO A LATO">IN ALTO A LATO</Value>
+		 	<Value Key="IN ALTO SOPRA IL VANO CORSA">IN ALTO SOPRA IL VANO CORSA</Value>
+		 	<Value Key="IN ARMADIO METALLICO INSTALLABILE A VISTA">IN ARMADIO METALLICO INSTALLABILE A VISTA</Value>
+		 	<Value Key="NEL VANO CORSA">NEL VANO CORSA</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='DoorsOperatorType' Type='STRING'>
+		 <Description>Tipologie di accessi operatore porte</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="NESSUNO">NESSUNO</Value>
+		 	<Value Key="MANUALE">MANUALE</Value>
+		 	<Value Key="AUTOMATICO">AUTOMATICO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='DoorsType' Type='STRING'>
+		 <Description>Tipologie di porte cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="2AB">2AB</Value>
+		 	<Value Key="2AC">2AC</Value>
+		 	<Value Key="2AT">2AT</Value>
+		 	<Value Key="2AS">2AS</Value>
+		 	<Value Key="2AG">2AG</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='landingDoorsOperatorType' Type='STRING'>
+		 <Description>Tipologie di operatore porte piano</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="MANUALE">MANUALE</Value>
+		 	<Value Key="SEMIAUTOMATICO">SEMIAUTOMATICO</Value>
+		 	<Value Key="AUTOMATICO">AUTOMATICO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='LandingDoorsType' Type='STRING'>
+		 <Description>Tipologie di porte piano</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="1AB">1AB</Value>
+		 	<Value Key="2AB">2AB</Value>
+		 	<Value Key="2AC">2AC</Value>
+		 	<Value Key="2AT">2AT</Value>
+		 	<Value Key="2AS">2AS</Value>
+		 	<Value Key="2AG">2AG</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarPanels' Type='STRING'>
+		 <Description>Tipologie di rivestimento cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="ANTIRUGGINE">ANTIRUGGINE</Value>
+		 	<Value Key="SKINPLATE">SKINPLATE</Value>
+		 	<Value Key="NOBILITATO MELANINICO">NOBILITATO MELANINICO</Value>
+		 	<Value Key="LAMINATO PLASTICO">LAMINATO PLASTICO</Value>
+		 	<Value Key="ACCIAIO INOX SATINATO">ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ACCIAIO INOX LUCIDO">ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="ACCIAIO INOX ANTIGRAFFIO">ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="ACCIAIO INOX ELETTROCOLORATO">ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="LEGNO TRATTATO CON VERNICI IGNIFUGHE">LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="VETRO STRATIFICATO BIANCO">VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="VETRO STRATIFICATO FUME'">VETRO STRATIFICATO FUME'</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarFlooring' Type='STRING'>
+		 <Description>Tipologie di pavimento cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="LINOLEUM">LINOLEUM</Value>
+		 	<Value Key="GOMMA A BOLLI">GOMMA A BOLLI</Value>
+		 	<Value Key="MARMO">MARMO</Value>
+		 	<Value Key="PARQUET">PARQUET</Value>
+		 	<Value Key="VETRO">VETRO</Value>
+		 	<Value Key="LAMIERA GRECATA">LAMIERA GRECATA</Value>
+		 	<Value Key="LAMIERA D'ACCIAIO INOX GRECATA">LAMIERA D'ACCIAIO INOX GRECATA</Value>
+		 	<Value Key="PREDISPOSTO PER PAVIMENTO DI FORNITURA DEL CLIENTE">PREDISPOSTO PER PAVIMENTO DI FORNITURA DEL CLIENTE</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarTop' Type='STRING'>
+		 <Description>Tipologie di cielino cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="PLAFFONIERA A SOFFITTO">PLAFFONIERA A SOFFITTO</Value>
+		 	<Value Key="PLAFFONIERA AD ANGOLO">PLAFFONIERA AD ANGOLO</Value>
+		 	<Value Key="CONTROCIELINO">CONTROCIELINO</Value>
+		 	<Value Key="CONTROCIELINO A BOLLI">CONTROCIELINO A BOLLI</Value>
+		 	<Value Key="CONTROCIELINO GRIGLIATO">CONTROCIELINO GRIGLIATO</Value>
+		 	<Value Key="FARETTI">FARETTI</Value>
+		 	<Value Key="CANALI VERTICALI">CANALI VERTICALI</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='PushbuttonType' Type='STRING'>
+		 <Description>Tipologie di pulsanti bottoniera cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="PLASTICA">PLASTICA</Value>
+		 	<Value Key="ACCIAIO">ACCIAIO</Value>
+		 	<Value Key="ACCIAIO ELETTROCOLORATO">ACCIAIO ELETTROCOLORATO</Value>
+		 	<Value Key="OTTONE">OTTONE</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarFinishing' Type='STRING'>
+		 <Description>Tipologie di rifinitura cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="ANTIRUGGINE">ANTIRUGGINE</Value>
+		 	<Value Key="SKINPLATE">SKINPLATE</Value>
+		 	<Value Key="ACCIAIO INOX SATINATO">ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ACCIAIO INOX LUCIDO">ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="ACCIAIO INOX ANTIGRAFFIO">ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="ACCIAIO INOX ELETTROCOLORATO">ACCIAIO INOX ELETTROCOLORATO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarExternalPanels' Type='STRING'>
+		 <Description>Tipologie di rivestimento esterno cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="SKINPLATE">SKINPLATE</Value>
+		 	<Value Key="ACCIAIO INOX SATINATO">ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ACCIAIO INOX LUCIDO">ACCIAIO INOX LUCIDO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarHandrail' Type='STRING'>
+		 <Description>Tipologie di corrimano cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="LAMIERA VERNICIATA">LAMIERA VERNICIATA</Value>
+		 	<Value Key="SKINPLATE">SKINPLATE</Value>
+		 	<Value Key="ACCIAIO INOX SATINATO">ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ACCIAIO INOX LUCIDO">ACCIAIO INOX LUCIDO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarBuffer' Type='STRING'>
+		 <Description>Tipologie di paracolpi cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="LEGNO">LEGNO</Value>
+		 	<Value Key="GOMMA">GOMMA</Value>
+		 	<Value Key="SKINPLATE">SKINPLATE</Value>
+		 	<Value Key="ACCIAIO">ACCIAIO</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='CarMirror' Type='STRING'>
+		 <Description>Tipologie di spechio cabina</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="SOVRAPPOSTO A MEZZA PARETE">SOVRAPPOSTO A MEZZA PARETE</Value>
+		 	<Value Key="SOVRAPPOSTO A TUTTA ALTEZZA">SOVRAPPOSTO A TUTTA ALTEZZA</Value>
+		 	<Value Key="INCASSATO A MEZZA PARETE">INCASSATO A MEZZA PARETE</Value>
+		 	<Value Key="INCASSATO A TUTTA ALTEZZA">INCASSATO A TUTTA ALTEZZA</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='ExternalAnomalyType' Type='STRING'>
+		 <Description>casi delle anomalie degli associati</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="Anomalia su prodotti o servizi nel ciclo produttivo">Anomalia su prodotti o servizi nel ciclo produttivo</Value>
+		 	<Value Key="Anomalia su prodotti o servizi a seguito di lavorazioni e trattamenti">Anomalia su prodotti o servizi a seguito di lavorazioni e trattamenti</Value>
+		 	<Value Key="Anomalia su prodotti o servizi fornito dal cliente">Anomalia su prodotti o servizi fornito dal cliente</Value>
+		 	<Value Key="Anomalia del sistema di gestione">Anomalia del sistema di gestione</Value>
+		 	<Value Key="Prodotto non conforme all'ordine">Prodotto non conforme all'ordine</Value>
+		 	<Value Key="Prodotto danneggiato">Prodotto danneggiato</Value>
+		 	<Value Key="Prodotto mancante in consegna">Prodotto mancante in consegna</Value>
+		 	<Value Key="Prodotto non funzionante">Prodotto non funzionante</Value>
+		 	<Value Key="Reclamo del cliente">Reclamo del cliente</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='InternalAnomalyType' Type='STRING'>
+		 <Description>Casi delle anomalie delle funzioni aziendali</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="Anomalia del sistema qualita'">Anomalia del sistema qualita'</Value>
+		 	<Value Key="Richiesta di azione correttiva">Richiesta di azione correttiva</Value>
+		 	<Value Key="Il documento riporta informazioni e metodi inesatti">Il documento riporta informazioni e metodi inesatti</Value>
+		 	<Value Key="Documento inesistente o non visualizzabile">Documento inesistente o non visualizzabile</Value>
+		 	<Value Key="Prodotto mancante in ingresso">Prodotto mancante in ingresso</Value>
+		 	<Value Key="Prodotto non funzionante in ingresso">Prodotto non funzionante in ingresso</Value>
+		 	<Value Key="Prodotto non danneggiato in ingresso">Prodotto non danneggiato in ingresso</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='Options' Type='STRING'>
+		 <Description>Ozioni</Description>
+		 <EnumerationValues>
+		 	<Value Key="Non Selezionato">Non Selezionato</Value>
+		 	<Value Key="RITORNO AUTOMATICO AL PIANO CON APERTURA PORTE">RITORNO AUTOMATICO AL PIANO CON APERTURA PORTE</Value>
+		 	<Value Key="MACCHINARIO ALLOGGIATO IN ARMADIO ISTALLABILE A VISTA">MACCHINARIO ALLOGGIATO IN ARMADIO ISTALLABILE A VISTA</Value>
+		 	<Value Key="AVVIAMENTO STELLA TRIANGOLO">AVVIAMENTO STELLA TRIANGOLO</Value>
+		 	<Value Key="AVVIAMENTO SOFT/STARTER">AVVIAMENTO SOFT/STARTER</Value>
+		 	<Value Key="SCAMBIATORE DI CALORE">SCAMBIATORE DI CALORE</Value>
+		 	<Value Key="VENTILAZIONE FORZATA">VENTILAZIONE FORZATA</Value>
+		 	<Value Key="VELOCITA' M./S. 1,00">VELOCITA' M./S. 1,00</Value>
+		 	<Value Key="MANOVRA SIMPLEX DOWN">MANOVRA SIMPLEX DOWN</Value>
+		 	<Value Key="MANOVRA SIMPLEX FULL">MANOVRA SIMPLEX FULL</Value>
+		 	<Value Key="MANOVRA DUPLEX DOWN">MANOVRA DUPLEX DOWN</Value>
+		 	<Value Key="MANOVRA DUPLEX FULL">MANOVRA DUPLEX FULL</Value>
+		 	<Value Key="DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE CHIAVE MECCANICA">DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE CHIAVE MECCANICA</Value>
+		 	<Value Key="DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE CHIAVE ELETTRONICA">DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE CHIAVE ELETTRONICA</Value>
+		 	<Value Key="DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE TASTIERINO A CODICE ALFANUMERICO">DISPOSITIVO D'INTERDIZIONE MANOVRA MEDIANTE TASTIERINO A CODICE ALFANUMERICO</Value>
+		 	<Value Key="DISPLAY DI SEGNALAZIONE POSIZIONE CABINA AI PIANI">DISPLAY DI SEGNALAZIONE POSIZIONE CABINA AI PIANI</Value>
+		 	<Value Key="COMPILATORE TELEFONICO PREDISPOSTO PER LINEA GSM">COMPILATORE TELEFONICO PREDISPOSTO PER LINEA GSM</Value>
+		 	<Value Key="ASPIRATORE / VENTILATORE DELLA CABINA">ASPIRATORE / VENTILATORE DELLA CABINA</Value>
+		 	<Value Key="PORTE DI PIANO DEL TIPO REI 90">PORTE DI PIANO DEL TIPO REI 90</Value>
+		 	<Value Key="PORTE DI PIANO DEL TIPO REI 120">PORTE DI PIANO DEL TIPO REI 120</Value>
+		 	<Value Key="PULSANTIERA DI CABINA DEL TIPO ANTIVANDALO">PULSANTIERA DI CABINA DEL TIPO ANTIVANDALO</Value>
+		 	<Value Key="PULSANTIERE DI PIANO DEL TIPO ANTIVANDALO">PULSANTIERE DI PIANO DEL TIPO ANTIVANDALO</Value>
+		 	
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN ANTIRUGGINE">PARETI ED ANTE CABINA CON FINITURA IN ANTIRUGGINE</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN SKINPLATE">PARETI ED ANTE CABINA CON FINITURA IN SKINPLATE</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN NOBILITATO MELANINICO">PARETI ED ANTE CABINA CON FINITURA IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN LAMINATO PLASTICO">PARETI ED ANTE CABINA CON FINITURA IN LAMINATO PLASTICO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX SATINATO">PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX LUCIDO">PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO">PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO">PARETI ED ANTE CABINA CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">PARETI ED ANTE CABINA CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN VETRO STRATIFICATO BIANCO">PARETI ED ANTE CABINA CON FINITURA IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="PARETI ED ANTE CABINA CON FINITURA IN VETRO STRATIFICATO FUME'">PARETI ED ANTE CABINA CON FINITURA IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ANTIRUGGINE">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ANTIRUGGINE</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN SKINPLATE">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN SKINPLATE</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN NOBILITATO MELANINICO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN LAMINATO PLASTICO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN LAMINATO PLASTICO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX SATINATO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX LUCIDO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN VETRO STRATIFICATO BIANCO">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN VETRO STRATIFICATO FUME'">ANTE E TELAI DELLE PORTE DI PIANO CON FINITURA IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="PAVIMENTO CON FINITURA IN ANTIRUGGINE">PAVIMENTO CON FINITURA IN ANTIRUGGINE</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN SKINPLATE">PAVIMENTO CON FINITURA IN SKINPLATE</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN NOBILITATO MELANINICO">PAVIMENTO CON FINITURA IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN LAMINATO PLASTICO">PAVIMENTO CON FINITURA IN LAMINATO PLASTICO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN ACCIAIO INOX SATINATO">PAVIMENTO CON FINITURA IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN ACCIAIO INOX LUCIDO">PAVIMENTO CON FINITURA IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO">PAVIMENTO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO">PAVIMENTO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">PAVIMENTO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN VETRO STRATIFICATO BIANCO">PAVIMENTO CON FINITURA IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="PAVIMENTO CON FINITURA IN VETRO STRATIFICATO FUME'">PAVIMENTO CON FINITURA IN VETRO STRATIFICATO FUME'</Value>
+		 
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ANTIRUGGINE">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ANTIRUGGINE</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE SKINPLATE">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE SKINPLATE</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE NOBILITATO MELANINICO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE NOBILITATO MELANINICO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE LAMINATO PLASTICO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE LAMINATO PLASTICO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX SATINATO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX LUCIDO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX ANTIGRAFFIO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX ELETTROCOLORATO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE LEGNO TRATTATO CON VERNICI IGNIFUGHE">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE VETRO STRATIFICATO BIANCO">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE VETRO STRATIFICATO FUME'">DISPOSITIVO D'ILLUMINAZIONE REALIZZATO MEDIANTE VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN ANTIRUGGINE">RIVESTIMENTO ESTERNO CABINA E PORTE IN ANTIRUGGINE</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN SKINPLATE">RIVESTIMENTO ESTERNO CABINA E PORTE IN SKINPLATE</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN NOBILITATO MELANINICO">RIVESTIMENTO ESTERNO CABINA E PORTE IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN LAMINATO PLASTICO">RIVESTIMENTO ESTERNO CABINA E PORTE IN LAMINATO PLASTICO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX SATINATO">RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX LUCIDO">RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX ANTIGRAFFIO">RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX ELETTROCOLORATO">RIVESTIMENTO ESTERNO CABINA E PORTE IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">RIVESTIMENTO ESTERNO CABINA E PORTE IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN VETRO STRATIFICATO BIANCO">RIVESTIMENTO ESTERNO CABINA E PORTE IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="RIVESTIMENTO ESTERNO CABINA E PORTE IN VETRO STRATIFICATO FUME'">RIVESTIMENTO ESTERNO CABINA E PORTE IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="CORRIMANO CON FINITURA IN ANTIRUGGINE">CORRIMANO CON FINITURA IN ANTIRUGGINE</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN SKINPLATE">CORRIMANO CON FINITURA IN SKINPLATE</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN NOBILITATO MELANINICO">CORRIMANO CON FINITURA IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN LAMINATO PLASTICO">CORRIMANO CON FINITURA IN LAMINATO PLASTICO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN ACCIAIO INOX SATINATO">CORRIMANO CON FINITURA IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN ACCIAIO INOX LUCIDO">CORRIMANO CON FINITURA IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO">CORRIMANO CON FINITURA IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO">CORRIMANO CON FINITURA IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">CORRIMANO CON FINITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN VETRO STRATIFICATO BIANCO">CORRIMANO CON FINITURA IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="CORRIMANO CON FINITURA IN VETRO STRATIFICATO FUME'">CORRIMANO CON FINITURA IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="SPECCHIO DEL TIPO ANTIRUGGINE">SPECCHIO DEL TIPO ANTIRUGGINE</Value>
+		 	<Value Key="SPECCHIO DEL TIPO SKINPLATE">SPECCHIO DEL TIPO SKINPLATE</Value>
+		 	<Value Key="SPECCHIO DEL TIPO NOBILITATO MELANINICO">SPECCHIO DEL TIPO NOBILITATO MELANINICO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO LAMINATO PLASTICO">SPECCHIO DEL TIPO LAMINATO PLASTICO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO ACCIAIO INOX SATINATO">SPECCHIO DEL TIPO ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO ACCIAIO INOX LUCIDO">SPECCHIO DEL TIPO ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO ACCIAIO INOX ANTIGRAFFIO">SPECCHIO DEL TIPO ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO ACCIAIO INOX ELETTROCOLORATO">SPECCHIO DEL TIPO ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO LEGNO TRATTATO CON VERNICI IGNIFUGHE">SPECCHIO DEL TIPO LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="SPECCHIO DEL TIPO VETRO STRATIFICATO BIANCO">SPECCHIO DEL TIPO VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="SPECCHIO DEL TIPO VETRO STRATIFICATO FUME'">SPECCHIO DEL TIPO VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN ANTIRUGGINE">FASCE PARACOLPI REALIZZATE IN ANTIRUGGINE</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN SKINPLATE">FASCE PARACOLPI REALIZZATE IN SKINPLATE</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN NOBILITATO MELANINICO">FASCE PARACOLPI REALIZZATE IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN LAMINATO PLASTICO">FASCE PARACOLPI REALIZZATE IN LAMINATO PLASTICO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX SATINATO">FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX LUCIDO">FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX ANTIGRAFFIO">FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX ELETTROCOLORATO">FASCE PARACOLPI REALIZZATE IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">FASCE PARACOLPI REALIZZATE IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN VETRO STRATIFICATO BIANCO">FASCE PARACOLPI REALIZZATE IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="FASCE PARACOLPI REALIZZATE IN VETRO STRATIFICATO FUME'">FASCE PARACOLPI REALIZZATE IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 	<Value Key="IMPIANTO ELETTRICO AUSILIARIO">IMPIANTO ELETTRICO AUSILIARIO</Value>
+		 	<Value Key="OPERE MURARIE PER LA REALIZZAZIONE DEL VANO CORSA">OPERE MURARIE PER LA REALIZZAZIONE DEL VANO CORSA</Value>
+		 	<Value Key="OPERE MURARIE PER LA REALIZZAZIONE DEL LOCALE MACCHINA">OPERE MURARIE PER LA REALIZZAZIONE DEL LOCALE MACCHINA</Value>
+		 	<Value Key="INCASTELLATURA METALLICA PER INTERNO ( ESTERNO) FINITA CON VERNICIATURA A FORNO COLORE RAL ( RIVESTIMENTO IN ACCIAIO)  + TAMPONAMENTO IN VETRO STRATIFICATO BIANCO (FUME')">INCASTELLATURA METALLICA PER INTERNO ( ESTERNO) FINITA CON VERNICIATURA A FORNO COLORE RAL ( RIVESTIMENTO IN ACCIAIO)  + TAMPONAMENTO IN VETRO STRATIFICATO BIANCO (FUME')</Value>
+		 	<Value Key="ZINCATURA DELLA STRUTTURA METALLICA PORTANTE">ZINCATURA DELLA STRUTTURA METALLICA PORTANTE</Value>
+		 	<Value Key="PONTEGGI">PONTEGGI</Value>
+		 	<Value Key="SCARICO ED IMMAGAZZINAMENTO DEI MATERIALI">SCARICO ED IMMAGAZZINAMENTO DEI MATERIALI</Value>
+		 	
+		 	<Value Key="MEZZI D'OPERA  TIRI IN ALTO  MANOVALANZA DI FORZA DI AIUTO AL MONTAGGIO">MEZZI D'OPERA  TIRI IN ALTO  MANOVALANZA DI FORZA DI AIUTO AL MONTAGGIO</Value>
+
+		 	
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN ANTIRUGGINE">ACCESSORI DI CABINA CON FIITURA IN ANTIRUGGINE</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN SKINPLATE">ACCESSORI DI CABINA CON FIITURA IN SKINPLATE</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN NOBILITATO MELANINICO">ACCESSORI DI CABINA CON FIITURA IN NOBILITATO MELANINICO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN LAMINATO PLASTICO">ACCESSORI DI CABINA CON FIITURA IN LAMINATO PLASTICO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX SATINATO">ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX SATINATO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX LUCIDO">ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX LUCIDO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX ANTIGRAFFIO">ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX ANTIGRAFFIO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX ELETTROCOLORATO">ACCESSORI DI CABINA CON FIITURA IN ACCIAIO INOX ELETTROCOLORATO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE">ACCESSORI DI CABINA CON FIITURA IN LEGNO TRATTATO CON VERNICI IGNIFUGHE</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN VETRO STRATIFICATO BIANCO">ACCESSORI DI CABINA CON FIITURA IN VETRO STRATIFICATO BIANCO</Value>
+		 	<Value Key="ACCESSORI DI CABINA CON FIITURA IN VETRO STRATIFICATO FUME'">ACCESSORI DI CABINA CON FIITURA IN VETRO STRATIFICATO FUME'</Value>
+		 	
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='EmailSubject' Type='STRING'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="BodyCreate">Acem Ascensori - Commessa: [Progetto] - Trattamento delle segnalazioni di anomalia.</Value>
+		 	<Value Key="BodyUpdate">Acem Ascensori - Commessa: [Progetto] - Modifica al trattamento delle segnalazioni di anomalia.</Value>
+		 	<Value Key="BodyCompleted">Acem Ascensori - Commessa: [Progetto] - Trattamento delle segnalazioni di anomalia completato.</Value>
+		 	<Value Key="AvvisoInterno">Acem Ascensori-Avviso Interno-Commessa: [Progetto]</Value>
+		 	<Value Key="AvvisoInternoUT">Acem Ascensori-Avviso Interno-Commessa: [Progetto]</Value>
+		 </EnumerationValues>
+	</DataType>
+	
+	<DataType Key='EmailBody' Type='STRING'>
+		 <Description></Description>
+		 <EnumerationValues>
+		 	<Value Key="BodyCreate"><![CDATA[
+		 	<html>
+<body>
+<table>
+<tr>
+	<td width="20px"> </td>
+	<td>
+		<table>
+		<tr>
+			<td>
+				<img src="http://www.proandpro.it/Multiportal/_acem/Images/Acem2.gif" border="0">
+			</td>
+			<td align="left">
+				<font size="+1"><b>Customer Service Acem Ascensori</b><br>
+				Via Clanio 6-8 - 80100 Caserta (CE)<br>
+				Tel. +39 0823423642 - Fax +39 0823452649<br>
+				<a href="http://www.acemascensori.it">http://www.acemascensori.it</a>
+				</font>
+			</td>
+		</tr>
+		<tr height="5px">
+			<td colspan="2"><hr></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<font size="+1">
+				Gentile Cliente, <br><br>La segnalazione di anomalia da lei introdotta e' stata accettata e catalogata come di seguito indicato.<br>
+				Ricevera' comunicazione dei trattamenti effettuati sull'anomalia allo stesso indirizzo email.<br>
+				Per qualunque altro chiarimento il customer service di <b>Acem Ascensori</b> e' a sua disposizione. <br>
+				Non esiti a contattarci.<br><br>Cordiali Saluti
+			</font>
+			</td></tr>
+		<tr height="15px">
+			<td colspan="2"><hr><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr><td>Codice identificativo</td><td><font size="+2" color="Navy"><b>[IdAM]</b></font></td></tr>
+					<tr><td>Data Inserimento</td><td><font size="+1" color="Navy"><b>[AnomalyDate]</b></font></td></tr>
+					<tr><td>Commessa Riferimento</td><td><font size="+2" color="Navy"><b>[Progetto]</b></font></td></tr>
+					<tr><td>Causa</td><td><font size="+1" color="Navy"><b>[AnomalyDescription]</b></font></td></tr>
+					<tr><td>Trattamenti Effettuati</td><td><font size="+1" color="Navy"><b>[AnomalyManagement]</b></font></td></tr>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+
+<body>
+</html>]]></Value>
+		 	<Value Key="BodyUpdate"><![CDATA[
+		 	<html>
+<body>
+<table>
+<tr>
+	<td width="20px"> </td>
+	<td>
+		<table>
+		<tr>
+			<td>
+				<img src="http://www.proandpro.it/Multiportal/_acem/Images/Acem2.gif" border="0">
+			</td>
+			<td align="left">
+				<font size="+1"><b>Customer Service Acem Ascensori</b><br>
+				Via Clanio 6-8 - 80100 Caserta (CE)<br>
+				Tel. +39 0823423642 - Fax +39 0823452649<br>
+				<a href="http://www.acemascensori.it">http://www.acemascensori.it</a>
+				</font>
+			</td>
+
+		</tr>
+		<tr height="5px">
+			<td colspan="2"><hr></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<font size="+1">
+				Gentile Cliente, <br><br>La segnalazione di anomalia da lei introdotta e' stata modificata come di seguito indicato.<br>
+				Per qualunque altro chiarimento il customer service di <b>Acem Ascensori</b> e' a sua disposizione. <br>
+				Non esiti a contattarci.<br><br>Cordiali Saluti
+			</font>
+			</td></tr>
+		<tr height="15px">
+			<td colspan="2"><hr><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr><td>Codice identificativo</td><td><font size="+2" color="Navy"><b>[IdAM]</b></font></td></tr>
+					<tr><td>Data Inserimento</td><td><font size="+1" color="Navy"><b>[AnomalyDate]</b></font></td></tr>
+					<tr><td>Commessa Riferimento</td><td><font size="+2" color="Navy"><b>[Progetto]</b></font></td></tr>
+					<tr><td>Causa</td><td><font size="+1" color="Navy"><b>[AnomalyDescription]</b></font></td></tr>
+					<tr><td>Trattamenti Effettuati</td><td><font size="+1" color="Navy"><b>[AnomalyManagement]</b></font></td></tr>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+
+<body>
+</html>]]></Value>
+	<Value Key="BodyCompleted"><![CDATA[
+		 	<html>
+<body>
+<table>
+<tr>
+	<td width="20px"> </td>
+	<td>
+		<table>
+		<tr>
+			<td>
+				<img src="http://www.proandpro.it/Multiportal/_acem/Images/Acem2.gif" border="0">
+			</td>
+			<td align="left">
+				<font size="+1"><b>Customer Service Acem Ascensori</b><br>
+				Via Clanio 6-8 - 80100 Caserta (CE)<br>
+				Tel. +39 0823423642 - Fax +39 0823452649<br>
+				<a href="http://www.acemascensori.it">http://www.acemascensori.it</a>
+				</font>
+			</td>
+		</tr>
+		<tr height="5px">
+			<td colspan="2"><hr></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<font size="+1">
+				Gentile Cliente, <br><br>La segnalazione di anomalia da lei introdotta e' stata risolta come di seguito indicato.<br>
+				Per qualunque altro chiarimento il customer service di <b>Acem Ascensori</b> e' a sua disposizione. <br>
+				Non esiti a contattarci.<br><br>Cordiali Saluti
+			</font>
+			</td></tr>
+		<tr height="15px">
+			<td colspan="2"><hr><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr><td>Codice identificativo</td><td><font size="+2" color="Navy"><b>[IdAM]</b></font></td></tr>
+					<tr><td>Data Inserimento</td><td><font size="+1" color="Navy"><b>[AnomalyDate]</b></font></td></tr>
+					<tr><td>Commessa Riferimento</td><td><font size="+2" color="Navy"><b>[Progetto]</b></font></td></tr>
+					<tr><td>Causa</td><td><font size="+1" color="Navy"><b>[AnomalyDescription]</b></font></td></tr>
+					<tr><td>Trattamenti Effettuati</td><td><font size="+1" color="Navy"><b>[AnomalyManagement]</b></font></td></tr>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		
+		
+		</table>
+	</td>
+</tr>
+</table>
+
+<body>
+</html>]]></Value>
+		 	<Value Key="AvvisoInterno"><![CDATA[
+		 	<html>
+<body>
+<table>
+<tr>
+	<td width="20px"> </td>
+	<td>
+		<table>
+		<tr>
+			<td>
+				<img src="http://www.proandpro.it/Multiportal/_acem/Images/Acem2.gif" border="0">
+			</td>
+			<td align="left">
+				<font size="+1"><b>Customer Service Acem Ascensori</b><br>
+				Via Clanio 6-8 - 80100 Caserta (CE)<br>
+				Tel. +39 0823423642 - Fax +39 0823452649<br>
+				<a href="http://www.acemascensori.it">http://www.acemascensori.it</a>
+				</font>
+			</td>
+
+		</tr>
+		<tr height="5px">
+			<td colspan="2"><hr></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<font size="+1">
+				<br><br>Notifica di apertura nuova anomalia. <br>Di seguito si riportano i dati dell'anomalia.<br><br>Cordiali Saluti
+			</font>
+			</td></tr>
+		<tr height="15px">
+			<td colspan="2"><hr><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr><td>Utente dell'anomalia</td><td><font size="+2" color="Navy"><b>[User]</b></font></td></tr>
+					<tr><td>Codice identificativo</td><td><font size="+2" color="Navy"><b>[IdAM]</b></font></td></tr>
+					<tr><td>Data Inserimento</td><td><font size="+1" color="Navy"><b>[AnomalyDate]</b></font></td></tr>
+					<tr><td>Commessa Riferimento</td><td><font size="+2" color="Navy"><b>[Progetto]</b></font></td></tr>
+					<tr><td>Causa</td><td><font size="+1" color="Navy"><b>[AnomalyDescription]</b></font></td></tr>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<body>
+</html>]]></Value>
+	<Value Key="AvvisoInternoUT"><![CDATA[
+		 	<html>
+<body>
+<table>
+<tr>
+	<td width="20px"> </td>
+	<td>
+		<table>
+		<tr>
+			<td>
+				<img src="http://www.proandpro.it/Multiportal/_acem/Images/Acem2.gif" border="0">
+			</td>
+			
+						<td align="left">
+				<font size="+1"><b>Customer Service Acem Ascensori</b><br>
+				Via Clanio 6-8 - 80100 Caserta (CE)<br>
+				Tel. +39 0823423642 - Fax +39 0823452649<br>
+				<a href="http://www.acemascensori.it">http://www.acemascensori.it</a>
+				</font>
+			</td>
+
+		</tr>
+		<tr height="5px">
+			<td colspan="2"><hr></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<font size="+1">
+				<br><br>Avviso di gestione anomalia. L'ufficio logistica e non conformita ha segnalato una nuova anomalia all'ufficio tecnico.<br>
+				In calce alla mail i dati dell'anomalia. Si prega di procedere al trattamento. <br><br>Cordiali Saluti
+			</font>
+			</td></tr>
+		<tr height="15px">
+			<td colspan="2"><hr><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table border="1">
+					<tr><td>Utente dell'anomalia</td><td><font size="+2" color="Navy"><b>[User]</b></font></td></tr>
+					<tr><td>Codice identificativo</td><td><font size="+2" color="Navy"><b>[IdAM]</b></font></td></tr>
+					<tr><td>Data Inserimento</td><td><font size="+1" color="Navy"><b>[AnomalyDate]</b></font></td></tr>
+					<tr><td>Commessa Riferimento</td><td><font size="+2" color="Navy"><b>[Progetto]</b></font></td></tr>
+					<tr><td>Causa</td><td><font size="+1" color="Navy"><b>[AnomalyDescription]</b></font></td></tr>
+					<tr><td>Trattamenti Effettuati</td><td><font size="+1" color="Navy"><b>[AnomalyManagement]</b></font></td></tr>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<body>
+</html>]]></Value>
+		 </EnumerationValues>
+	</DataType>
+</DataTypes>

@@ -1,0 +1,70 @@
+<Services>
+	<Service Name="Vendita Impianto elevatore">
+		<Description>La vendita di un ascensore, montacarichi o piattaforma elevatrice</Description>
+		<Workflow>VenditaImpianti</Workflow>
+		<Users></Users>
+		<Roles>
+			<Role Key="SiteAdministrator"></Role>
+			<Role Key="DG"></Role>
+			<Role Key="CM"></Role>
+		</Roles>
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Context" Value="General"></ExtendedAttribute>
+		</ExtendedAttributes>
+	</Service>
+	<Service Name="Acquisto Impianto elevatore">
+		<Description>Acquisto di un ascensore, montacarichi o piattaforma elevatrice</Description>
+		<Workflow>AcquistoImpianti</Workflow>
+		<Users></Users>
+		<Roles>
+			<Role Key="SiteAdministrator"></Role>
+			<Role Key="DG"></Role>
+			<Role Key="CM"></Role>
+		</Roles>
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Context" Value="General"></ExtendedAttribute>
+		</ExtendedAttributes>
+	</Service>
+	<Service Name="Acquisto Materiali e Servizi">
+		<Description>Acquisto Materiali e Servizi</Description>
+		<Workflow>AcquistoRiparazioni</Workflow>
+		<Users></Users>
+		<Roles>
+			<Role Key="SiteAdministrator"></Role>
+			<Role Key="IMP"></Role>
+			<Role Key="ARM"></Role>
+			<Role Key="RC"></Role>
+			<Role Key="CM"></Role>
+		</Roles>
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Context" Value="General"></ExtendedAttribute>
+		</ExtendedAttributes>
+	</Service>
+	<Service Name="Installazione impianto elevatore">
+		<Description>Installazione impianto elevatore</Description>
+		<Workflow>InstallazioneMontaggio</Workflow>
+		<Users>
+			<User Key="a.pastore"></User>
+		</Users>
+		<Roles>
+			<Role Key="SiteAdministrator"></Role>
+			<Role Key="DG"></Role>
+			<Role Key="IMP"></Role>
+		</Roles>
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Context" Value="General"></ExtendedAttribute>
+		</ExtendedAttributes>
+	</Service>
+	<Service Name="Gestione Anomalia">
+		<Description>Introduzione e trattamento delle non conformita'</Description>
+		<Workflow>GestioneAnomalia</Workflow>
+		<Users></Users>
+		<Roles>
+			<Role Key="DG"></Role>
+			<Role Key="CM"></Role>
+		</Roles>
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Context" Value="General"></ExtendedAttribute>
+		</ExtendedAttributes>
+	</Service>
+</Services>

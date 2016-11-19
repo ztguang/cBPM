@@ -1,0 +1,18 @@
+<Events>
+
+	<EventOccurred id="StartUp">
+	
+		<Parameters>
+				<Parameter Name=""></Parameter>
+				<Parameter Name=""></Parameter>
+				<Parameter Name=""></Parameter>
+		</Parameters>
+		
+		<Source Type="Workflow|User|System" Name="ActivityName|UserName|System" DateTime="">
+		</Source>
+		
+		<Managed DateTime="" Status="Managed|Unmanaged|Managing"></Managed>
+		
+	</EventOccurred>
+	
+</Events>

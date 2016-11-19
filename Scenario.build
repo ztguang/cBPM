@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<project name="ScenarioFramework_Test" default="default" basedir="." xmlns="http://nant.sf.net/release/0.90/nant.xsd">
+
+  <property name="NOW" value="${datetime::now()}" />
+
+  <property name="ScenarioDirectory" value="${environment::get-variable('WF_HOME')}" />
+  <property name="ScenarioTestEnvironment" value="${ScenarioDirectory}/TestEnvironment"/>
+  <property name="ScenarioReferenceDirectory" value="${ScenarioDirectory}/reference/Scenario"/>
+  <property name="ScenarioDependecyDirectory" value="${ScenarioDirectory}/reference/dotNET"/>
+  
+  <target name="default" description ="">
+    <call target="prepareEnvironmentCPP"/>
+  </target>
+
+  <target name="deploy">
+    <copy todir="${ScenarioTestEnvironment}" overwrite="true" verbose="true" flatten="true">
+      <fileset>
+
+        <!-- Core -->
+        <include name="${ScenarioReferenceDirectory}/Scenario.Applications.ApplicationHelper.dll" />
+        <include name="${ScenarioReferenceDirectory}/Scenario.WorkflowEngine.dll" />
+        <include name="${ScenarioReferenceDirectory}/Scenario.Libraries.bOS.dll" />
+
+        <!-- Tools -->
+        <include name="${ScenarioReferenceDirectory}/Scenario.Tools.MiniConsole.exe" />
+        <include name="${ScenarioReferenceDirectory}/Scenario.Tools.Executor.exe" />
+        <include name="${ScenarioReferenceDirectory}/Scenario.Modeler.exe" />
+        <include name="${ScenarioReferenceDirectory}/Scenario.Modeler.exe.config" />
+
+
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="deployBin" description="Used only to semplify debug" >
+
+    <echo message="ScenarioTestEnvironment: ${ScenarioTestEnvironment}"/>
+
+    <copy todir="${ScenarioTestEnvironment}" overwrite="true" verbose="true" flatten="true">
+
+      <fileset>
+  
+        <include name="${ScenarioDependecyDirectory}/Castle.DynamicProxy.dll" />
+        <include name="${ScenarioDependecyDirectory}/Common.Logging.dll" />
+        <include name="${ScenarioDependecyDirectory}/IBatisNet.Common.dll" />
+        <include name="${ScenarioDependecyDirectory}/IBatisNet.Common.Logging.Log4Net.dll" />
+        <include name="${ScenarioDependecyDirectory}/IBatisNet.Common.Logging.Log4Net.xml" />
+        <include name="${ScenarioDependecyDirectory}/IBatisNet.Common.xml" />
+        <include name="${ScenarioDependecyDirectory}/IBatisNet.DataMapper.dll" />
+
+        <include name="${ScenarioDependecyDirectory}/log4net.dll" />
+        <include name="${ScenarioDependecyDirectory}/MySql.Data.dll" />
+        <include name="${ScenarioDependecyDirectory}/nunit.framework.dll" />
+
+        <include name="${ScenarioDependecyDirectory}/Quartz.dll" />
+        <include name="${ScenarioDependecyDirectory}/Quartz.xml" />
+      </fileset>
+
+    </copy>
+
+  </target>
+  
+</project>

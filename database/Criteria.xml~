@@ -1,0 +1,89 @@
+<DataBaseManager>
+
+  <Connections>
+
+
+    <MySQL Type="Primary" Id="1">
+
+      <PoolManager Min="1" Max="1" Retry="0" Delay="100" />
+
+      <Host>127.0.0.1</Host>
+      <Port></Port>
+      <User>root</User>
+      <Password>123456</Password>
+      <DataBase>criteria</DataBase>
+
+      <ObjectManager>
+        <Object Type="ProcessTemplate" Managed="No">${CRITERIA_HOME}/database/processTemplate</Object>
+        <Object Type="ProcessInstance" Managed="Yes" />
+        <Object Type="Reports" Managed="No" />
+        <Object Type="DataTypes" Managed="No">${CRITERIA_HOME}/database/Criteria.DataTypes.xml</Object>
+        <Object Type="Services" Managed="No">${CRITERIA_HOME}/database/Criteria.Services.xml</Object>
+        <Object Type="Users" Managed="No">${CRITERIA_HOME}/database/Criteria.Users.xml</Object>
+        <Object Type="Roles" Managed="No">${CRITERIA_HOME}/database/Criteria.Roles.xml</Object>
+        <Object Type="Applications" Managed="No">${CRITERIA_HOME}/database/Criteria.Applications.xml</Object>
+        <Object Type="ApplicationsDataBase" Managed="Yes" />
+        <Object Type="Events" Managed="No"></Object>
+        <Object Type="OccurredEvents" Managed="No"></Object>
+        <Object Type="WaitingEvents" Managed="No"></Object>
+
+      </ObjectManager>
+
+    </MySQL>
+
+    
+
+    <!--SQLite Type="Primary" Id="1">
+
+      <PoolManager Min="1" Max="1" Retry="0" Delay="50" />
+      <Path>${CRITERIA_HOME}\database</Path>
+      <DataBase>Criteria.db</DataBase>
+
+      <ObjectManager>
+        
+        <Object Type="ProcessTemplate" Managed="No">${CRITERIA_HOME}/database/processTemplate</Object>
+        <Object Type="ProcessInstance" Managed="Yes" />
+        <Object Type="Reports" Managed="No" />
+        <Object Type="DataTypes" Managed="No">${CRITERIA_HOME}/database/Criteria.DataTypes.xml</Object>
+        <Object Type="Services" Managed="No">${CRITERIA_HOME}/database/Criteria.Services.xml</Object>
+        <Object Type="Users" Managed="No">${CRITERIA_HOME}/database/Criteria.Users.xml</Object>
+        <Object Type="Roles" Managed="No">${CRITERIA_HOME}/database/Criteria.Roles.xml</Object>
+        <Object Type="Applications" Managed="No">${CRITERIA_HOME}/database/Criteria.Applications.xml</Object>
+        <Object Type="Events" Managed="No"></Object>
+        <Object Type="OccurredEvents" Managed="No"></Object>
+        <Object Type="WaitingEvents" Managed="No"></Object>
+
+      </ObjectManager>
+
+    </SQLite-->
+
+    <CriteriaFileSystem Type="Primary" Id="2">
+
+      <ObjectManager>
+        
+        <Object Type="ProcessTemplate" Managed="Yes" Repository="Folder">${CRITERIA_HOME}/database/processTemplate</Object>
+        <Object Type="ProcessInstance" Managed="Yes" Repository="Folder">${CRITERIA_HOME}/database/processInstance</Object>
+
+        <!-- Object Type="DataTypes" Managed="Yes" Repository="File">${CRITERIA_HOME}/database/Criteria.DataTypes.xml</Object -->
+        <Object Type="Reports" Managed="No" />
+        <Object Type="DataTypes" Managed="Yes" Repository="Folder">${CRITERIA_HOME}/database/dataTypes</Object>
+        <Object Type="Services" Managed="Yes" Repository="File">${CRITERIA_HOME}/database/Criteria.Services.xml</Object>
+        <Object Type="Users" Managed="Yes" Repository="File">${CRITERIA_HOME}/database/Criteria.Users.xml</Object>
+        <Object Type="Roles" Managed="Yes" Repository="File">${CRITERIA_HOME}/database/Criteria.Roles.xml</Object>
+
+        <!--Object Type="Applications" Managed="Yes" Repository="File">${CRITERIA_HOME}/database/Criteria.Applications.xml</Object-->
+        <Object Type="Applications" Managed="Yes" Repository="Folder">${CRITERIA_HOME}/database/applications</Object>
+        <Object Type="ApplicationsDataBase" Managed="No" />
+        <Object Type="Events" Managed="No"></Object>
+        <Object Type="OccurredEvents" Managed="No"></Object>
+        <Object Type="WaitingEvents" Managed="No"></Object>
+        <Object Type="CheckList" Managed="Yes" Repository="Folder">${CRITERIA_HOME}/database/checkList</Object>
+
+      </ObjectManager>
+
+    </CriteriaFileSystem>
+
+
+  </Connections>
+
+</DataBaseManager>

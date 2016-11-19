@@ -1,0 +1,614 @@
+<WorkflowProcess Name="RNIMEP">
+	<Description></Description>
+	<ParentProcess>0</ParentProcess>
+	<Status></Status>
+	<ProcessId>0</ProcessId>
+	<Activities>
+		<Activity Name="GetRNIMEP" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="GetSlave" Type=""><Application>CriteriaComponent</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="IdSlave" Mandatory="NO" Type="INTEGER"><Bind>IdSlave</Bind><Value>[IdSlave]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="ReleaseRNIMEP" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="BOOLEAN"><Function Name="ReleaseSlave" Type=""><Application>CriteriaComponent</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="IdSlave" Mandatory="NO" Type="INTEGER"><Bind></Bind><Value>[IdSlave]</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="AllReleased" Mandatory="NO" Type="INTEGER"><Bind>AllOrderReleased</Bind><Value>[AllOrderReleased]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="Start" Type="START">
+			<Description>Start Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity START for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity START for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity START for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="End" Type="END">
+			<Description>End Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity END for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity END for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity END for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="RNI" Type="API">
+			<Description>RNI</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="CM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+						<Role Key="RC">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="CM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+						<Role Key="RC">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MEP" Type="API">
+			<Description>MEP</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateRNI" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>RNI</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdRNI</Bind><Value>[IdRNI]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="Row" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="GetNumberRow" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="Operator1" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdSlave]</Value></Parameter><Parameter Name="Operator2" Mandatory="NO" Type="NUMBER"><Bind></Bind><Value>1</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="NrRow" Mandatory="NO" Type="INTEGER"><Bind>IdRow</Bind><Value>[IdRow]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateMEP" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>MEP</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdMEP</Bind><Value>[IdMEP]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateOFF" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>OFF</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdOFF</Bind><Value>[IdOFF]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="OFF" Type="API">
+			<Description>OFF</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="CM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+						<Role Key="RC">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="CM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+						<Role Key="RC">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="ProposalConfirm" Type="API">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes>
+				<Attribute Name="ActivityAlias" Type="STRING" Direction="NONE">
+					<Value>Conferma Preventivo</Value>
+				</Attribute>
+				<Attribute Name="WFMS_ASSIGN_TO" Type="STRING" Direction="NONE">
+					<Value>[User]</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CheckProposal" Type="CONDITION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="CONDITION">
+					<Script Type="EVAL_EXPRESSION" DataType="ProposalStatus">*(%1%@==@%1%)%ProposalConfirmed%%ProposalConfirmed%*</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateLCO" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>LCO</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdLCO</Bind><Value>[IdLCO]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="LCO" Type="API">
+			<Description>LCO</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="GestioneRDO" Type="API">
+			<Description>GestioneRDO</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="ANI">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="ANI">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="Acquisti" Type="SUBFLOW">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes>
+				<Attribute Name="Execution" Type="SubflowExecution" Direction="INPUT">
+					<Value>SEQUENCE</Value>
+				</Attribute>
+				<Attribute Name="Occurency" Type="Number" Direction="INPUT">
+					<Value>1</Value>
+				</Attribute>
+				<Attribute Name="ProcessName" Type="WorkflowProcesses" Direction="INPUT">
+					<Value>Acquisto</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="SUBFLOW">
+					<Script Type="SUBFLOW_SYNCH" DataType="ApplicationResult"></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MakeOrder2" Type="CONDITION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="CONDITION">
+					<Script Type="EVAL_EXPRESSION" DataType="OrderManagement">*(%1%@==@%1%)%OrderManagement%%OrderManagement%*</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+	</Activities>
+	<Transitions>
+		<Transition From="Start" To="GetRNIMEP">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="Row" To="CreateRNI">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="RNI" To="GestioneRDO">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MEP" To="CreateOFF">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CreateRNI" To="RNI">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="GetRNIMEP" To="Row">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CreateMEP" To="MEP">
+			<Result>[None]</Result>
+			<ReExec>NO</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CreateOFF" To="OFF">
+			<Result>[None]</Result>
+			<ReExec>NO</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="OFF" To="ProposalConfirm">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="ProposalConfirm" To="CheckProposal">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CheckProposal" To="ReleaseRNIMEP">
+			<Result>ABORTED</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="ReleaseRNIMEP" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CheckProposal" To="CreateLCO">
+			<Result>CONFIRMED</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="CreateLCO" To="LCO">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="LCO" To="ReleaseRNIMEP">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CheckProposal" To="RNI">
+			<Result>WAITING</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="GestioneRDO" To="MakeOrder2">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="Acquisti" To="GestioneRDO">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MakeOrder2" To="CreateMEP">
+			<Result>ProcessContinue</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="MakeOrder2" To="Acquisti">
+			<Result>ProcessContinue</Result>
+			<ReExec>YES</ReExec>
+			<Operator>NotEqual</Operator>
+		</Transition>
+	</Transitions>
+	<Attributes>
+		<Attribute Name="IdDocument" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdMEP" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdRNI" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdRow" Type="Number" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdSlave" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="OrderManagement" Type="OrderManagement" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="ProcessAlias" Type="STRING" Direction="NONE">
+			<Value>Vendita Impianto</Value>
+		</Attribute>
+		<Attribute Name="User" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</WorkflowProcess>

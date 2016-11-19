@@ -1,0 +1,69 @@
+<Applications>
+	<Application Name="CriteriaComponent" Type="LIBRARY" LibraryFile="cppScenario.Application.CriteriaComponent">
+		<Functions>
+			<Function Name="MakeSlaves">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES" />
+					<Parameter Name="NrSlaves" Type="INTEGER" Mandatory="YES" />
+				</Parameters>
+				<Result>
+					<Parameters>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="GetSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES" />
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="IdSlave" Type="INTEGER" />
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="ReleaseSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES" />
+					<Parameter Name="IdSlave" Type="INTEGER" Mandatory="YES" />
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="AllReleased" Type="INTEGER" Mandatory="YES" />
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="NoSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES" />
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="AllReleased" Type="INTEGER" Mandatory="YES" />
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="StartKPI">
+				<Parameters>
+					<Parameter Name="ID" Type="INTEGER" Mandatory="YES" />
+					<Parameter Name="KPI" Type="STRING" Mandatory="YES" />
+					<Parameter Name="Value" Type="STRING" Mandatory="NO" />
+				</Parameters>
+				<Result>
+					<Parameters>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="StopKPI">
+				<Parameters>
+					<Parameter Name="ID" Type="INTEGER" Mandatory="YES" />
+					<Parameter Name="KPI" Type="STRING" Mandatory="YES" />
+					<Parameter Name="Value" Type="STRING" Mandatory="NO" />
+				</Parameters>
+				<Result>
+					<Parameters>
+					</Parameters>
+				</Result>
+			</Function>
+		</Functions>
+	</Application>
+</Applications>

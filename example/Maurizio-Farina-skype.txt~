@@ -1,0 +1,731 @@
+四
+[CST下午9时41分22秒] 同光 张: hi
+[CST下午9时41分57秒] 同光 张: i have send you a email
+[CST下午9时47分21秒] 同光 张: i reuse skype
+[CST下午9时47分53秒] 同光 张: you can connect to me by skype
+[CST下午9时48分23秒] 同光 张: thank you for your help very much
+[CST下午9时49分07秒] Maurizio Farina: hi
+[CST下午9时50分22秒] Maurizio Farina: i think is better to make a FASCGI
+[CST下午9时50分29秒] Maurizio Farina: in lighttpd
+[CST下午9时51分55秒] 同光 张: yes
+[CST下午9时53分00秒] 同光 张: first to  install everything on CentOS Virtual Machine in Amazon AWS
+[CST下午9时53分35秒] 同光 张: i set the environment
+[CST下午9时58分19秒] 同光 张: but ,  whether GUI (desktop) on centos has high Corresponding speed
+[CST下午10时24分29秒] Maurizio Farina: yeah
+[CST下午10时24分43秒] Maurizio Farina: but i think to use CentOS just to do little things or a demo
+[CST下午10时24分58秒] Maurizio Farina: instead to develop we can continue to use our CentOS local installation
+[CST下午11时32分05秒] 同光 张: ok
+[CST下午11时45分36秒] Maurizio Farina: ok i'll try to set a CentOS Amazon WS
+ 2015年11月13日星期五
+[CST下午4时55分26秒] Maurizio Farina: Hi
+[CST下午4时55分34秒] 同光 张: hi
+[CST下午4时55分51秒] Maurizio Farina: but is possible from CentOS exporting an image
+[CST下午4时56分03秒] Maurizio Farina: i mean to create a virtual machine from your installation
+[CST下午4时57分05秒] 同光 张: i have no tried before
+[CST下午4时57分25秒] Maurizio Farina: maybe there is a tool or something like that
+[CST下午4时57分33秒] Maurizio Farina: maybe is enough to create a disk image
+[CST下午4时57分45秒] Maurizio Farina: so when i create a virtual machine i can use that disk image
+[CST下午4时57分46秒] 同光 张: you have problems in centos
+[CST下午4时57分49秒] 同光 张: ?
+[CST下午4时57分52秒] Maurizio Farina: yes
+[CST下午4时58分11秒] Maurizio Farina: because generally i tried to do this kind of stuff in the evening
+[CST下午4时58分25秒] 同光 张: did you  have a public IP
+[CST下午4时58分37秒] Maurizio Farina: no
+[CST下午4时58分45秒] Maurizio Farina: you mean my laptop?
+[CST下午4时58分50秒] 同光 张: yes
+[CST下午4时58分55秒] Maurizio Farina: so you want to analyze my installation
+[CST下午4时58分59秒] 同光 张: yes
+[CST下午4时59分04秒] Maurizio Farina: ok not now
+[CST下午4时59分10秒] Maurizio Farina: but tomorrow is possiblew
+[CST下午5时00分16秒] 同光 张: ok
+[CST下午5时00分53秒] 同光 张: i think  i can resolve problems in your system  remotely
+[CST下午5时01分07秒] Maurizio Farina: yes
+[CST下午5时01分16秒] Maurizio Farina: i'd like to have an amazon VM too
+[CST下午5时01分55秒] 同光 张:  amazon VM  should buy?
+[CST下午5时02分08秒] Maurizio Farina: yes but it's very cheap
+[CST下午5时02分29秒] Maurizio Farina: a very cheap vm just to use for small thing
+[CST下午5时02分43秒] Maurizio Farina: another way is to copy VM on dropbox
+[CST下午5时02分56秒] Maurizio Farina: i want to avoid other people have to configure CentOS
+[CST下午5时03分51秒] 同光 张: i think the best way is that i solve your problems remotely  currently
+[CST下午5时04分03秒] Maurizio Farina: ok
+[CST下午5时04分30秒] 同光 张: tomorrow can i  access your centos?
+[CST下午5时07分17秒] Maurizio Farina: yes
+[CST下午5时07分33秒] Maurizio Farina: tomorow morning (italy time) i'll be on train
+[CST下午5时07分43秒] Maurizio Farina: in the afternoon i'll be connected
+[CST下午5时07分51秒] Maurizio Farina: so i'll ping you
+[CST下午5时07分57秒] 同光 张: ok
+[CST下午5时12分04秒] 同光 张: http://www.tuicool.com/articles/ayuqimf
+[CST下午5时12分15秒] 同光 张: please access http://www.tuicool.com/articles/ayuqimf
+[CST下午5时12分37秒] 同光 张:  Step:8 Select the Software that you want to install. Click on " Software Selection ".
+[CST下午5时13分16秒] 同光 张: should select "development ... "
+[CST下午5时14分19秒] 同光 张: then the right side in figure in step 8, you'd better select all add-ons
+[CST下午5时15分31秒] Maurizio Farina: ok is a step by step installation
+[CST下午5时16分06秒] 同光 张: the key  is   Step:8
+[CST下午5时17分01秒] 同光 张: you reinstall centos abide by this
+[CST下午5时17分33秒] 同光 张: then install  codeblocks  according to  my  email
+[CST下午5时18分04秒] 同光 张: and  set some environment parameters  according to my email
+[CST下午5时18分19秒] 同光 张: i think it will be OK
+[CST下午5时18分40秒] Maurizio Farina: yes
+[CST下午5时18分44秒] Maurizio Farina: i think so
+[CST下午5时18分48秒] Maurizio Farina: thank's  so much
+[CST下午5时18分51秒] 同光 张: note the path of criteria
+[CST下午5时19分10秒] Maurizio Farina: yeah
+[CST下午5时19分15秒] Maurizio Farina: i've seen
+[CST下午5时19分29秒] 同光 张: /opt/cBPM/criteria-lin
+[CST下午5时19分47秒] 同光 张: good lucky
+[CST下午5时20分16秒] Maurizio Farina: bye
+[CST下午5时20分20秒] 同光 张: bye
+ 2015年11月15日星期日
+[CST下午11时19分38秒] 同光 张: hi
+[CST下午11时20分00秒] Maurizio Farina: hi
+[CST下午11时20分03秒] 同光 张: https://play.google.com/store/apps/details?id=com.drx2.bootmanager.lite&feature=search_result
+[CST下午11时20分17秒] 同光 张: could you help me download
+[CST下午11时21分23秒] Maurizio Farina: i n which way?
+[CST下午11时22分01秒] 同光 张: can not directly download?
+[CST下午11时22分40秒] 同光 张: access  http://www.lifestohack.com/how-to-dual-boot-multiple-roms-on-your-android-smartphone/
+[CST下午11时22分59秒] 同光 张: search "Download Boot Manager"
+[CST下午11时23分05秒] 同光 张: locate here
+[CST下午11时23分17秒] 同光 张: there has links
+[CST下午11时23分30秒] Maurizio Farina: the link goes to google play
+[CST下午11时23分37秒] 同光 张: yes
+[CST下午11时23分43秒] Maurizio Farina: i'm not able to download from browser
+[CST下午11时24分02秒] 同光 张: oh
+[CST下午11时24分18秒] 同光 张: let me find ways
+[CST下午11时24分26秒] Maurizio Farina: ok
+[CST下午11时24分52秒] 同光 张: did you work on codeblocks
+[CST下午11时26分17秒] Maurizio Farina: not now
+[CST下午11时26分20秒] Maurizio Farina: i'm at work
+[CST下午11时26分22秒] Maurizio Farina: in office
+[CST下午11时26分40秒] Maurizio Farina: on friday the company has asked to us to work in weekend
+[CST下午11时26分50秒] 同光 张: my means did you solve problems?
+[CST下午11时26分56秒] Maurizio Farina: tomorrow we have to deploy our software in production environment
+[CST下午11时27分04秒] 同光 张: yes,  in your free time
+[CST下午11时27分22秒] Maurizio Farina: i spent whole weekend to work on other software
+[CST下午11时27分29秒] 同光 张: oh
+[CST下午11时27分36秒] Maurizio Farina: yes
+[CST下午11时27分38秒] Maurizio Farina: really sad
+[CST下午11时27分44秒] 同光 张: yes
+[CST下午11时27分54秒] 同光 张: have a good rest
+[CST下午11时28分05秒] Maurizio Farina: i'm still at work
+[CST下午11时28分09秒] Maurizio Farina: in office
+[CST下午11时28分14秒] 同光 张: oh
+[CST下午11时28分30秒] Maurizio Farina: yes for a stupid angular front end
+[CST下午11时29分26秒] 同光 张: Don't bother you
+[CST下午11时29分46秒] Maurizio Farina: :-)
+[CST下午11时30分21秒] 同光 张: :)
+[CST下午11时36分32秒] Maurizio Farina: as soon as possible i'll try to install codeblock
+ 2015年11月16日星期一
+[CST上午2时04分28秒] Maurizio Farina: i'm downloading iso centoos
+[CST上午2时04分40秒] Maurizio Farina: after i create a virtual machine
+[CST上午2时04分45秒] Maurizio Farina: install everything i need
+[CST上午2时05分00秒] Maurizio Farina: if i have trouble i ask to you to connect to may laptop
+[CST上午2时05分11秒] Maurizio Farina: i'll continue to use windows too
+[CST上午2时05分17秒] Maurizio Farina: to integrate processmaker
+[CST上午7时45分47秒] 同光 张: hi
+[CST上午7时52分51秒] 同光 张: yum install hunspell-devel -y
+[CST下午4时13分07秒] Maurizio Farina: ok i will try
+[CST下午4时15分24秒] Maurizio Farina: no package hanspell-devel available
+[CST下午4时17分00秒] 同光 张:  mount /opt/CentOS-7-x86_64-Everything-1503-01.iso /mnt/tmp/
+[CST下午4时17分19秒] 同光 张: rpm -ivh /mnt/tmp/Packages/hunspell-devel-1.3.2-13.el7.x86_64.rpm
+[CST下午4时18分13秒] 同光 张: or
+[CST下午4时18分14秒] 同光 张: http://blog.chinaunix.net/uid-14735472-id-5257924.html
+[CST下午4时18分27秒] 同光 张: then you can use yum install
+[CST下午4时19分36秒] Maurizio Farina: ok
+[CST下午4时19分39秒] Maurizio Farina: i try
+[CST下午4时46分38秒] Maurizio Farina: i've installed hanspell and hanspell-devel
+[CST下午4时46分50秒] Maurizio Farina: and configure make install codeblocks
+[CST下午4时46分57秒] Maurizio Farina: i've tried to run codeblock
+[CST下午4时47分07秒] Maurizio Farina: but the error is:
+[CST下午4时47分40秒] 同光 张: you can copy the error
+[CST下午4时47分41秒] Maurizio Farina: libwx_gtk2u-3.0.0.so.0 cannot
+[CST下午4时47分52秒] Maurizio Farina: open shared object
+[CST下午4时48分03秒] Maurizio Farina: i remember something about in your guide
+[CST下午4时48分08秒] Maurizio Farina: you cand send me the link again
+[CST下午4时48分17秒] Maurizio Farina: i've installed wxwidgets
+[CST下午4时48分36秒] 同光 张: yum install gtk2*
+[CST下午4时49分11秒] 同光 张: have you installed wxWidgets-3.0.2.tar.bz2?
+[CST下午4时49分17秒] Maurizio Farina: yes
+[CST下午4时49分24秒] Maurizio Farina: i tried you on gtk2
+[CST下午4时49分30秒] Maurizio Farina: but everything is already installed
+[CST下午4时49分50秒] Maurizio Farina: Package gtk2-devel-2.24.22-5.el7_0.1.x86_64 already installed and latest version
+Package gtk2-2.24.22-5.el7_0.1.x86_64 already installed and latest version
+Package gtk2-devel-docs-2.24.22-5.el7_0.1.x86_64 already installed and latest version
+Package gtk2-immodules-2.24.22-5.el7_0.1.x86_64 already installed and latest version
+Package gtk2-immodule-xim-2.24.22-5.el7_0.1.x86_64 already installed and latest version
+Nothing to do
+[CST下午4时50分32秒] 同光 张: install wxWidgets-3.0.2.tar.bz2
+[CST下午4时50分41秒] 同光 张: ./configure --enable-xrc --enable-monolithic --enable-unicode
+make -j5
+make install
+ ------------------------------------------------------
+ 
+ The installation of wxWidgets is finished.  On certain
+ platforms (e.g. Linux) you'll now have to run ldconfig
+ if you installed a shared library and also modify the
+ LD_LIBRARY_PATH (or equivalent) environment variable.
+ 
+ wxWidgets comes with no guarantees and doesn't claim
+ to be suitable for any purpose.
+ 
+ Read the wxWindows Licence on licencing conditions.
+ 
+ ------------------------------------------------------
+
+ldconfig
+[CST下午4时51分27秒] Maurizio Farina: so i run ldconfig in wxWidget folder?
+[CST下午4时53分08秒] 同光 张: gedit /etc/ld.so.conf
+[CST下午4时53分27秒] 同光 张: add a line at end of the file
+[CST下午4时53分29秒] 同光 张: /usr/local/lib
+[CST下午4时53分42秒] 同光 张: then execute ldconfig
+[CST下午4时54分14秒] 同光 张: add a line at end of   /etc/ld.so.conf as following:
+[CST下午4时54分16秒] 同光 张:  /usr/local/lib
+[CST下午4时54分25秒] 同光 张:  then execute ldconfig
+[CST下午4时54分39秒] 同光 张: [root@localhost android-source]# ls /usr/local/lib/
+libjq.a                      libjq.so.1.0.4               libwx_gtk2u_gl-3.0.so        php/
+libjq.la                     libwx_gtk2u-3.0.so           libwx_gtk2u_gl-3.0.so.0      wx/
+libjq.so                     libwx_gtk2u-3.0.so.0         libwx_gtk2u_gl-3.0.so.0.2.0  
+libjq.so.1                   libwx_gtk2u-3.0.so.0.2.0     node_modules/                
+[root@localhost android-source]# ls /usr/local/lib/
+[CST下午4时55分19秒] 同光 张:  libwx_gtk2u-3.0.0.so.0   exists in  /usr/local/lib/
+[CST下午4时58分07秒] Maurizio Farina: To view this shared photo, go to: https://api.asm.skype.com/s/i?0-neu-d5-a6e1316b7d34bbd7d9381b33aa49a486
+[CST下午4时58分38秒] Maurizio Farina: ok codeblock is up
+[CST下午4时58分54秒] Maurizio Farina: now install criteria solution
+[CST下午4时59分00秒] 同光 张: ok
+[CST下午5时31分51秒] Maurizio Farina: /opt/cBPM/criteria-lin/src/Criteria/Criteria.WorkflowEngine/engine/Workflow.cpp|407|error: no matching function for call to ‘WorkflowEngine::Criteria::Core::Workflow::throwEvent(WorkflowEngine::Criteria::Event::WorkflowEvent::EndWorkflowEvent)’|
+[CST下午5时31分57秒] Maurizio Farina: have you meet this error?
+[CST下午5时32分12秒] Maurizio Farina: you have changed just bOS or the Engine too?
+[CST下午5时32分38秒] 同光 张: yes
+[CST下午5时33分12秒] Maurizio Farina: yes have you changed the engine too? or the error?
+[CST下午5时38分02秒] 同光 张: let me run again
+[CST下午5时38分11秒] Maurizio Farina: ok
+[CST下午5时43分09秒] 同光 张: i have the same error
+[CST下午5时43分15秒] Maurizio Farina: ok
+[CST下午5时43分26秒] Maurizio Farina: it seems events file are not in the source
+[CST下午5时45分15秒] Maurizio Farina: header file about events
+[CST下午5时45分20秒] Maurizio Farina: are not in your tar
+[CST下午5时46分48秒] 同光 张: alter  				throwEvent ( ManualWorkflowEvent ( this ) );
+[CST下午5时48分24秒] Maurizio Farina: but the header files?
+[CST下午5时48分56秒] 同光 张: /opt/cBPM/criteria-lin/include
+[CST下午5时50分12秒] Maurizio Farina: ook
+[CST下午5时50分23秒] Maurizio Farina: i think nant copy all header in that folder
+[CST下午5时50分35秒] Maurizio Farina: but header files are not present in the codeblocks workspace
+[CST下午5时51分53秒] 同光 张: no
+[CST下午5时52分04秒] 同光 张: header file  no problems
+[CST下午5时52分48秒] 同光 张: [root@localhost criteria-lin]# gedit ./src/Criteria/Criteria.WorkflowEngine/engine/Workflow.cpp
+[CST下午5时53分15秒] 同光 张: replace
+[CST下午5时53分17秒] 同光 张: 				//throwEvent ( ManualWorkflowEvent ( this ) );     //ztg delete
+				throwEvent ( (ManualWorkflowEvent*)(this) );
+[CST下午5时53分31秒] 同光 张: 					//throwEvent ( EndWorkflowEvent ( this ) );     //ztg delete
+					throwEvent ( (EndWorkflowEvent*)(this) );
+[CST下午5时53分47秒] 同光 张: 					//throwEvent ( EndWorkflowEvent ( this ) );     //ztg delete
+					throwEvent ( (EndWorkflowEvent*)(this) );
+[CST下午5时54分01秒] 同光 张: about  three points
+[CST下午5时54分17秒] 同光 张: then recompile
+[CST下午5时54分24秒] 同光 张:  has an error
+[CST下午5时55分17秒] 同光 张: 	BaseEvent* evt = &event;
+[CST下午5时56分43秒] 同光 张: edit events/WorkflowListener.cpp
+[CST下午5时56分47秒] 同光 张: replace
+[CST下午5时56分58秒] 同光 张: 46 line
+[CST下午5时57分00秒] 同光 张: //	BaseEvent* evt = &event;
+	BaseEvent* evt = event;
+[CST下午5时57分10秒] 同光 张:  then recompile ,  OK
+[CST下午5时57分19秒] Maurizio Farina: ok
+[CST下午5时58分13秒] 同光 张: Output file is /opt/cBPM/criteria-lin/bin/Criteria/Debug/Tools.Executor/executer with size 47.44 KB
+Running target post-build steps
+cp /opt/cBPM/criteria-lin/bin/Criteria/Debug/Tools.Executor/executer /opt/cBPM/criteria-lin/lib
+[CST下午5时59分23秒] Maurizio Farina: ok i compiled criteria
+[CST下午5时59分34秒] Maurizio Farina: now i have an error on Executor
+[CST下午5时59分45秒] Maurizio Farina: ld||cannot find -lmysqlclient|
+[CST下午6时00分06秒] 同光 张: in my test
+[CST下午6时00分16秒] 同光 张: i not use mysql
+[CST下午6时00分26秒] 同光 张: i only use file
+[CST下午6时00分29秒] Maurizio Farina: ok
+[CST下午6时00分29秒] 同光 张: xml file
+[CST下午6时00分44秒] Maurizio Farina: but in the codeblock solution maybe there is a refernce to that library
+[CST下午6时02分08秒] 同光 张: [root@localhost include]# pwd
+/opt/cBPM/criteria-lin/include
+[root@localhost include]# grep ztg -R .
+[CST下午6时02分26秒] 同光 张: you can find files i have altered
+[CST下午6时04分35秒] 同光 张: I hope you can use mysql and sqlite3
+[CST下午6时04分57秒] Maurizio Farina: the problem is with mysql libraries
+[CST下午6时05分07秒] Maurizio Farina: i tried to remove from linker properties
+[CST下午6时05分11秒] 同光 张: and hope you to integrate criteria with processmaker
+[CST下午6时05分22秒] Maurizio Farina: but this libraries is used by bOS too
+[CST下午6时05分40秒] Maurizio Farina: so to disable mysql you have changed header files?
+[CST下午6时05分50秒] 同光 张: no
+[CST下午6时06分03秒] 同光 张: cd /opt/cBPM/criteria-lin/include
+[CST下午6时06分09秒] 同光 张:  grep ztg -R .
+[CST下午6时06分17秒] Maurizio Farina: yes i've seen
+[CST下午6时06分22秒] 同光 张:  you can find files i have altered
+[CST下午6时06分27秒] Maurizio Farina: but you have mysql on your centos ?
+[CST下午6时06分32秒] 同光 张: yes
+[CST下午6时06分36秒] Maurizio Farina: ok
+[CST下午6时07分02秒] Maurizio Farina: so the bOS and Executor linker goes well because you have libmysql on your centos
+[CST下午6时07分26秒] 同光 张: yes
+[CST下午6时07分39秒] 同光 张: bos not set link lib
+[CST下午6时07分46秒] 同光 张: you can set if
+[CST下午6时07分53秒] 同光 张: you can set it
+[CST下午6时07分58秒] 同光 张: maybe  ok
+[CST下午6时08分55秒] 同光 张: right key click on Criteria.Libraries.bOS
+[CST下午6时09分21秒] 同光 张: select "build options"
+[CST下午6时09分56秒] 同光 张: select "search directories"
+[CST下午6时10分09秒] 同光 张: select "linker"
+[CST下午6时10分27秒] 同光 张: to set  lib include
+[CST下午6时10分53秒] 同光 张: /usr/lib64/mysql/
+[CST下午6时11分27秒] 同光 张: i will to have a dinner
+[CST下午6时11分33秒] Maurizio Farina: ok
+[CST下午6时11分37秒] 同光 张: see you later
+[CST下午6时11分38秒] Maurizio Farina: i set the linker
+[CST下午6时30分31秒] Maurizio Farina: i change libmysql in libmysqlclient in linker
+[CST下午6时30分38秒] Maurizio Farina: executer has been build
+[CST下午6时30分44秒] Maurizio Farina: i set the variables
+[CST下午6时30分48秒] Maurizio Farina: and try to run executo
+[CST下午6时30分50秒] Maurizio Farina: executor
+[CST下午6时30分52秒] Maurizio Farina: [root@mwzero lib]#  ./executer TestNotePad
+./executer: error while loading shared libraries: libLibraries.so: cannot open shared object file: No such file or directory
+[CST下午6时54分28秒] Maurizio Farina: ok
+[CST下午6时54分37秒] Maurizio Farina: i've copied all libraries in /usr/lib64
+[CST下午6时54分46秒] Maurizio Farina: i've tried to run executer
+[CST下午6时54分53秒] Maurizio Farina: but is impossible to find CRITERIA_HOME
+[CST下午6时55分05秒] Maurizio Farina: i've setted CRITERIA_HOME in bashrc file
+[CST下午6时55分10秒] Maurizio Farina: if i type
+[CST下午6时55分15秒] Maurizio Farina: echo $CRITERIA_HOME
+[CST下午6时55分17秒] Maurizio Farina: i seen the value
+[CST下午7时00分56秒] Maurizio Farina: ok i've resolved
+[CST下午7时01分02秒] Maurizio Farina: but i've a coredump
+[CST下午7时01分26秒] Maurizio Farina: in workflowlistener
+[CST下午7时01分32秒] Maurizio Farina: something wrong with the event
+[CST下午7时19分17秒] Maurizio Farina: ok
+[CST下午7时19分28秒] Maurizio Farina: i have commented event management
+[CST下午7时19分30秒] Maurizio Farina: in Criteria
+[CST下午7时19分38秒] Maurizio Farina: and now i'm able to run process and test it
+[CST下午7时19分42秒] Maurizio Farina: everything seems ok
+[CST下午7时19分48秒] Maurizio Farina: but i need to see your changes
+[CST下午7时20分00秒] Maurizio Farina: in the meantime i'll studying processmaker
+[CST下午7时20分09秒] Maurizio Farina: thank you so much for your help
+[CST下午7时20分10秒] Maurizio Farina: bye
+[CST下午7时59分32秒] 同光 张: hy
+[CST下午7时59分34秒] 同光 张: hi
+[CST下午8时00分06秒] 同光 张: have you solved mysql problem?
+[CST下午8时58分29秒] Maurizio Farina: yes
+[CST下午9时00分05秒] 同光 张: write a note at where you modified in *.c  files
+[CST下午9时01分16秒] 同光 张: in *.cpp files
+[CST下午9时04分24秒] Maurizio Farina: i'm talking about libmysqlclient
+[CST下午9时04分34秒] Maurizio Farina: you mean to access to mysql?
+[CST下午9时05分02秒] 同光 张: yes
+[CST下午9时05分10秒] Maurizio Farina: ok then
+[CST下午9时05分24秒] Maurizio Farina: i try to install mysql and use criteria with mysql
+[CST下午9时07分30秒] 同光 张: mount /opt/CentOS-7-x86_64-Everything-1503-01.iso /mnt/tmp/
+[CST下午9时08分37秒] 同光 张: rpm -ivh /mnt/tmp/Packages/mariadb-*
+[CST下午9时08分44秒] 同光 张: can install mysql
+[CST下午9时15分44秒] Maurizio Farina: i ve to install mariadb?
+[CST下午9时16分07秒] 同光 张: yes
+[CST下午9时16分14秒] 同光 张: it is mysql
+[CST下午9时16分19秒] 同光 张: in centos
+[CST下午9时19分54秒] Maurizio Farina: a lot of dependecies
+[CST下午9时20分09秒] 同光 张: yum install mysql
+[CST下午9时20分12秒] 同光 张: and
+[CST下午9时20分32秒] 同光 张: yum install mysql-devel
+[CST下午9时20分51秒] Maurizio Farina: already installed
+[CST下午9时21分15秒] 同光 张: then can use them
+[CST下午9时21分51秒] 同光 张: did you install  processmaker?
+[CST下午9时22分06秒] Maurizio Farina: not in centos
+[CST下午9时22分06秒] 同光 张: and  can execute correctlly
+[CST下午9时22分25秒] 同光 张: you'd better install pm in centos
+[CST下午9时22分41秒] 同光 张: see the email i send to you
+[CST下午9时22分48秒] 同光 张: step by step
+[CST下午9时23分13秒] Maurizio Farina: [root@mwzero ~]# sudo /sbin/service mysqld start
+Redirecting to /bin/systemctl start  mysqld.service
+Failed to issue method call: Unit mysqld.service failed to load: No such file or directory.
+[CST下午9时25分08秒] 同光 张: can i connect you notebook
+[CST下午9时25分12秒] 同光 张: you ip?
+[CST下午9时25分26秒] 同光 张: root
+[CST下午9时25分30秒] 同光 张: and  passwd
+[CST下午9时26分41秒] 同光 张: oh
+[CST下午9时26分50秒] Maurizio Farina: yes
+[CST下午9时26分56秒] 同光 张: systemctl start|stop|restart mariadb.service
+[CST下午9时27分10秒] 同光 张: systemctl start mariadb.service
+[CST下午9时27分56秒] Maurizio Farina: [root@mwzero ~]# systemctl start mariadb.service
+Failed to issue method call: Unit mariadb.service failed to load: No such file or directory.
+[CST下午9时28分25秒] 同光 张:  you ip?
+[CST下午9时28分41秒] Maurizio Farina: in centos
+[CST下午9时28分44秒] Maurizio Farina: ?
+[CST下午9时28分49秒] 同光 张: ifconfig
+[CST下午9时29分05秒] Maurizio Farina: i mean you can connect to centos
+[CST下午9时29分10秒] Maurizio Farina: is a virtual machine
+[CST下午9时29分16秒] 同光 张: no
+[CST下午9时29分27秒] 同光 张: you set vm
+[CST下午9时29分44秒] 同光 张: give centos ppublic ip
+[CST下午9时29分56秒] Maurizio Farina: is in nat
+[CST下午9时30分06秒] 同光 张: yes
+[CST下午9时30分12秒] 同光 张: nat can do
+[CST下午9时30分28秒] 同光 张: set forward
+[CST下午9时34分08秒] 同光 张: or you execute the commands
+[CST下午9时34分22秒] Maurizio Farina: excusem me
+[CST下午9时34分26秒] Maurizio Farina: i'm goggling
+[CST下午9时34分32秒] Maurizio Farina: i've installed mariadb
+[CST下午9时34分46秒] Maurizio Farina: to connect i use mysql
+[CST下午9时34分47秒] Maurizio Farina: ut
+[CST下午9时34分49秒] Maurizio Farina: but
+[CST下午9时35分00秒] Maurizio Farina: ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+[CST下午9时35分06秒] Maurizio Farina: i know this error
+[CST下午9时35分12秒] 同光 张: oh
+[CST下午9时35分19秒] 同光 张: dont worry
+[CST下午9时35分20秒] Maurizio Farina: but from centos how to resolve?
+[CST下午9时35分28秒] 同光 张: that is ok
+[CST下午9时36分16秒] 同光 张: mysqladmin -u root -p password '123456'
+[CST下午9时36分43秒] 同光 张: then
+[CST下午9时36分44秒] 同光 张: mysql -u root -p
+[CST下午9时36分50秒] 同光 张: input 123456
+[CST下午9时37分17秒] Maurizio Farina: ok
+[CST下午9时37分24秒] Maurizio Farina: everithing is ok
+[CST下午9时38分14秒] 同光 张: ok
+[CST下午9时39分23秒] Maurizio Farina: ok i proceed
+[CST下午10时09分48秒] Maurizio Farina: MariaDB [criteria]> select count(*) from SF_WorkflowProcesses;
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+[CST下午10时09分58秒] Maurizio Farina: ok Criteria has started using mysql
+[CST下午10时10分22秒] 同光 张: great
+[CST下午10时10分42秒] Maurizio Farina: ok i need to study a little bit more
+[CST下午10时10分51秒] Maurizio Farina: i dont use linux from few years
+[CST下午10时11分03秒] Maurizio Farina: and i want to see your changes on the code
+[CST下午10时11分11秒] 同光 张: i thind you are great
+[CST下午10时11分17秒] Maurizio Farina: oh
+[CST下午10时11分32秒] Maurizio Farina: do you need:
+[CST下午10时11分37秒] Maurizio Farina: 1. execute processmaker process
+[CST下午10时11分42秒] Maurizio Farina: 2. update processmaker db
+[CST下午10时11分43秒] Maurizio Farina: correct?
+[CST下午10时11分49秒] 同光 张: yes
+[CST下午10时11分57秒] Maurizio Farina: ok
+[CST下午10时12分10秒] Maurizio Farina: i'll come back as soon as possible with news
+[CST下午10时12分21秒] Maurizio Farina: for the moment thanks for your help with centos
+[CST下午10时12分28秒] Maurizio Farina: see you soon
+[CST下午10时12分30秒] 同光 张: not at all
+[CST下午10时13分12秒] 同光 张: the processed works are difficult
+[CST下午10时13分31秒] 同光 张: and heavy
+[CST下午10时14分18秒] 同光 张: the subsequent works are difficult and heavy
+[CST下午10时15分27秒] Maurizio Farina: yes
+[CST下午10时15分48秒] Maurizio Farina: but Criteria is not able to perform bpmn2 processes
+[CST下午10时16分03秒] 同光 张: yes
+[CST下午10时16分04秒] Maurizio Farina: but in Criteria we can execute complext operations
+[CST下午10时16分17秒] Maurizio Farina: so is able to perform bpmn2 but i need to change something
+[CST下午10时16分38秒] Maurizio Farina: for example Criteria is able to perform multi-branch
+[CST下午10时16分53秒] Maurizio Farina: and implement fork on the branch process
+[CST下午10时16分58秒] Maurizio Farina: and syncrhonize
+[CST下午10时17分08秒] Maurizio Farina: so is able to do bpmn2 operations
+[CST下午10时17分16秒] Maurizio Farina: but nont understand bpmn2 syntax
+[CST下午10时19分14秒] Maurizio Farina: about your project?
+[CST下午10时19分20秒] Maurizio Farina: do you need Criteria on android?
+[CST下午10时22分28秒] 同光 张: yes
+[CST下午10时22分34秒] 同光 张: i need Criteria on android?
+[CST下午10时23分14秒] 同光 张: i want to study bpms in mobile ad hoc network
+[CST下午10时23分46秒] 同光 张: and  fixed and mobile environments
+[CST下午10时23分52秒] Maurizio Farina: but i didn't the goal
+[CST下午10时24分00秒] Maurizio Farina: so a process running on android
+[CST下午10时24分59秒] 同光 张: do you think it is not a good idea
+[CST下午10时25分15秒] Maurizio Farina: i didn't catch the idea very well
+[CST下午10时25分25秒] Maurizio Farina: have you pdf about the idea?
+[CST下午10时25分41秒] 同光 张: now no
+[CST下午10时25分49秒] 同光 张: it is my ideas
+[CST下午10时26分03秒] Maurizio Farina: ok don't worry
+[CST下午10时26分11秒] Maurizio Farina: so a process is running on a device
+[CST下午10时26分21秒] Maurizio Farina: and retrieve info from others devices?
+[CST下午10时27分09秒] 同光 张: i will  run criteria on centos and  android
+[CST下午10时27分37秒] Maurizio Farina: ok for now
+[CST下午10时27分38秒] 同光 张: so criteria has two versions
+[CST下午10时27分41秒] Maurizio Farina: is enough
+[CST下午10时28分29秒] 同光 张: could  you integrate processmaker with criteria , no matter  xpdl or bpmn2, can execute like http://wiki.processmaker.com/3.0/CreateBPMNProcess10Minutes
+[CST下午10时29分33秒] 同光 张: you at least  modify one part,  criteria  or  processesmaker
+[CST下午10时29分49秒] Maurizio Farina: ok
+[CST下午10时29分54秒] 同光 张: do you think which is easy
+[CST下午10时30分45秒] Maurizio Farina: is not so easy
+[CST下午10时30分49秒] Maurizio Farina: but i think is possible
+[CST下午10时30分52秒] 同光 张: yes
+[CST下午10时30分53秒] Maurizio Farina: obviously the process
+[CST下午10时30分56秒] Maurizio Farina: not the form editor
+[CST下午10时31分18秒] 同光 张: yes
+[CST下午10时31分52秒] 同光 张: are you familiar with php
+[CST下午10时32分11秒] Maurizio Farina: no
+[CST下午10时32分15秒] Maurizio Farina: python
+[CST下午10时32分29秒] Maurizio Farina: but i think i need to study process
+[CST下午10时34分56秒] 同光 张: there lack presentation layer for criteria, i think use  processmaker as the presention layer, that is a shortcut
+[CST下午10时35分12秒] Maurizio Farina: yes i got that
+[CST下午10时35分23秒] Maurizio Farina: in the past i have used office
+[CST下午10时35分29秒] Maurizio Farina: process drawn in visio
+[CST下午10时35分35秒] Maurizio Farina: and the form were office documents
+[CST下午10时35分48秒] Maurizio Farina: so i exchange xml from and to office documents
+[CST下午10时36分03秒] 同光 张: yes
+[CST下午10时36分28秒] 同光 张: but B/S is better currently
+[CST下午10时52分37秒] 同光 张: Sorry to trouble you
+[CST下午10时53分08秒] Maurizio Farina: ?
+[CST下午10时54分32秒] 同光 张: i gave your extra works that you can not do
+[CST下午10时54分49秒] Maurizio Farina: ?
+[CST下午10时57分01秒] 同光 张: my means is the integration between criteria and processmaker, even that you are not familiar with php
+[CST下午10时57分38秒] Maurizio Farina: i need to understand this task
+ 2015年11月18日星期三
+[CST下午9时19分38秒] 同光 张: hi
+[CST下午9时20分25秒] 同光 张: did you execute criteria in codeblocks?
+[CST下午9时21分33秒] 同光 张: i have wrong
+[CST下午9时24分58秒] 同光 张: please look at email
+[CST下午10时08分43秒] Maurizio Farina: not in codeblock
+[CST下午10时08分53秒] Maurizio Farina: but from centos bash
+[CST下午10时09分00秒] Maurizio Farina: i've commented events
+[CST下午10时09分11秒] Maurizio Farina: somethings wrong with the event
+[CST下午10时09分19秒] Maurizio Farina: so i've commented all throwEvent
+[CST下午10时09分29秒] 同光 张: oh
+[CST下午10时11分31秒] 同光 张: is there a way to solve it
+[CST下午10时12分12秒] Maurizio Farina: i didn't understand your changes on events management
+[CST下午10时12分17秒] Maurizio Farina: for now you can disable
+[CST下午10时12分23秒] Maurizio Farina: it's unuseful
+[CST下午10时12分28秒] 同光 张: now, it is evt->getName()  with wrong
+[CST下午10时12分49秒] Maurizio Farina: i don't know
+[CST下午10时12分54秒] 同光 张: but  before ,  there  is no wrong
+[CST下午10时13分02秒] Maurizio Farina: ?
+[CST下午10时13分09秒] Maurizio Farina: strange
+[CST下午10时13分12秒] 同光 张: yes
+[CST下午10时13分32秒] Maurizio Farina: maybe compilation options?
+[CST下午10时13分39秒] Maurizio Farina: debug or release
+[CST下午10时13分59秒] 同光 张: maybe my centos environment vary
+[CST下午10时14分06秒] 同光 张: debug
+[CST下午10时14分08秒] Maurizio Farina: evt->getName
+[CST下午10时14分09秒] 同光 张: i use
+[CST下午10时14分13秒] Maurizio Farina: is very simple
+[CST下午10时14分17秒] Maurizio Farina: maybe evt is null
+[CST下午10时14分17秒] 同光 张: yes
+[CST下午10时14分46秒] 同光 张: segment default
+[CST下午10时14分51秒] Maurizio Farina: oh
+[CST下午10时14分55秒] 同光 张: String BaseEvent::getName()
+{
+	return sName;
+}
+[CST下午10时15分00秒] 同光 张: 	return sName;
+[CST下午10时15分08秒] 同光 张: sName;
+[CST下午10时15分23秒] Maurizio Farina: segmentation fault
+[CST下午10时15分30秒] Maurizio Farina: you are using memory dealoccated
+[CST下午10时32分29秒] 同光 张: ?
+[CST下午10时32分38秒] 同光 张: not know
+[CST下午10时32分56秒] 同光 张: how to close it
+[CST下午10时34分13秒] Maurizio Farina: i need to see your changes
+[CST下午10时34分23秒] Maurizio Farina: never happen in windows environment
+[CST下午10时34分25秒] Maurizio Farina: but i repeat
+[CST下午10时34分58秒] Maurizio Farina: events are useful to integrate Criteria in environment like C#, java and so on
+[CST下午10时35分05秒] Maurizio Farina: events are not used by Criteria
+[CST下午10时35分19秒] 同光 张: oh
+[CST下午10时35分29秒] Maurizio Farina: for example:
+[CST下午10时35分37秒] Maurizio Farina: start process -> Criteria throws Event
+[CST下午10时35分49秒] Maurizio Farina: you can write code to listen that events
+[CST下午10时35分58秒] Maurizio Farina: so Criteria is just a library to execute process
+[CST下午10时36分11秒] Maurizio Farina: and your code knows: start process, stop process and so on
+[CST下午10时36分21秒] Maurizio Farina: but Criteria doesn't use events internally
+[CST下午10时36分31秒] Maurizio Farina: so i've commented
+[CST下午10时36分40秒] 同光 张: ok i see
+[CST下午10时36分50秒] Maurizio Farina: just to verify Criteria running in CentOs and using mySQL
+[CST下午10时36分58秒] Maurizio Farina: in my environemtn everything is ok
+[CST下午10时37分11秒] 同光 张: how to use mysql?
+[CST下午10时37分13秒] 同光 张: and
+[CST下午10时37分29秒] Maurizio Farina: i've configure database.xml
+[CST下午10时37分32秒] Maurizio Farina: to use mysql
+[CST下午10时37分40秒] Maurizio Farina: just uncomment xml tag
+[CST下午10时37分54秒] Maurizio Farina: and configure correctly host, user and password
+[CST下午10时38分02秒] Maurizio Farina: create a db in mysql called criteria
+[CST下午10时38分10秒] Maurizio Farina: and running scripts to create all trables
+[CST下午10时38分11秒] Maurizio Farina: tables
+[CST下午10时38分33秒] Maurizio Farina: run criteria
+[CST下午10时38分41秒] Maurizio Farina: or better executor
+[CST下午10时38分51秒] Maurizio Farina: in the last my development i used sqlite
+[CST下午10时38分59秒] Maurizio Farina: so script are not update correctly for mysql
+[CST下午10时39分06秒] Maurizio Farina: you need to add two fields
+[CST下午10时39分14秒] Maurizio Farina: created and completed as datetime
+[CST下午10时39分20秒] Maurizio Farina: in sf_workfloprocesses
+[CST下午10时39分28秒] Maurizio Farina: same actions for sqllite
+[CST下午10时39分43秒] Maurizio Farina: you need to configure in database.xml
+[CST下午10时39分48秒] 同光 张: ok
+[CST下午10时40分40秒] 同光 张: [root@localhost criteria-lin]# pwd
+/opt/cBPM/criteria-lin
+[CST下午10时40分46秒] 同光 张: [root@localhost criteria-lin]# find . -name  database.xml
+[CST下午10时41分00秒] 同光 张: there no  database.xml
+[CST下午10时42分03秒] Maurizio Farina: :-)
+[CST下午10时42分06秒] Maurizio Farina: criteria.xml
+[CST下午10时42分16秒] 同光 张: # ./executer TestNotePad
+can open gedit
+[CST下午10时42分19秒] 同光 张: but
+[CST下午10时42分30秒] 同光 张:  ./executer ???
+[CST下午10时42分38秒] 同光 张: can operate mysql
+[CST下午10时42分45秒] Maurizio Farina: yes
+[CST下午10时42分51秒] Maurizio Farina: you need to configure criteria.xml
+[CST下午10时42分56秒] Maurizio Farina: i've done that
+[CST下午10时43分00秒] Maurizio Farina: just that
+[CST下午10时43分03秒] Maurizio Farina: obviously
+[CST下午10时43分09秒] Maurizio Farina: you need to install mariadb
+[CST下午10时43分16秒] Maurizio Farina: and mariadb-devel
+[CST下午10时43分28秒] Maurizio Farina: so executer find the libmysqlclient
+[CST下午10时43分36秒] Maurizio Farina: used in bOS
+[CST下午10时44分00秒] Maurizio Farina: because Executer use Criteria that use database libraries in bOS
+[CST下午10时44分12秒] Maurizio Farina: so dependecy with mysqlclient is in bOS
+[CST下午10时44分23秒] 同光 张: ok i see
+[CST下午10时44分46秒] 同光 张: [root@localhost criteria-lin]# find . -name  criteria.xml
+[CST下午10时44分56秒] 同光 张: there has no  criteria.xml
+[CST下午10时45分01秒] Maurizio Farina: Criteria.xml
+[CST下午10时45分05秒] 同光 张: oh
+[CST下午10时45分10秒] Maurizio Farina: sorry
+[CST下午10时45分11秒] 同光 张:  i am sorry
+[CST下午10时45分15秒] Maurizio Farina: for case sensitive
+[CST下午10时45分32秒] Maurizio Farina: but in the last years of criteria development i used only windows
+[CST下午10时45分42秒] Maurizio Farina: because all customers were on windows
+[CST下午10时45分46秒] Maurizio Farina: :-)
+[CST下午10时45分57秒] Maurizio Farina: i want to merge your changes with the code on codeplex
+[CST下午10时46分10秒] Maurizio Farina: maybe create a project on github
+[CST下午10时46分22秒] Maurizio Farina: what do you think?
+[CST下午10时46分27秒] 同光 张: yes
+[CST下午10时46分35秒] 同光 张: but not now
+[CST下午10时47分00秒] Maurizio Farina: yes i got your point
+[CST下午10时47分10秒] 同光 张: it should be improved
+[CST下午10时47分11秒] Maurizio Farina: maybe is better on bitbucket as a private repository
+[CST下午10时47分21秒] Maurizio Farina: so we can share code more fastly
+[CST下午10时47分27秒] 同光 张: ok
+[CST下午10时47分38秒] Maurizio Farina: so our code is always aligned
+[CST下午10时47分55秒] 同光 张: ok
+[CST下午10时48分08秒] Maurizio Farina: otherwise you change the code and i change the code
+[CST下午10时48分12秒] Maurizio Farina: so became difficult
+[CST下午10时48分19秒] 同光 张: yes
+[CST下午10时48分48秒] 同光 张: there are two versions
+[CST下午10时48分53秒] 同光 张: for centos
+[CST下午10时48分57秒] 同光 张: for android
+[CST下午10时49分32秒] Maurizio Farina: android?
+[CST下午10时49分37秒] 同光 张: yes
+[CST下午10时49分39秒] Maurizio Farina: it's different from centOS
+[CST下午10时49分48秒] 同光 张: a little
+[CST下午10时49分55秒] Maurizio Farina: o
+[CST下午10时49分56秒] Maurizio Farina: oh
+[CST下午10时50分57秒] Maurizio Farina: it's not possible to mix everything?
+[CST下午10时51分02秒] 同光 张: it is mainly the libs
+[CST下午10时51分03秒] Maurizio Farina: with another macro in the code?
+[CST下午10时51分11秒] Maurizio Farina: yes i can immagine
+[CST下午10时51分18秒] 同光 张: between  centos and android
+[CST下午10时51分44秒] Maurizio Farina: in the future is better to avoid to use bOS but an opensource stl libraries
+[CST下午10时51分46秒] 同光 张: no,  i  have no  mac
+[CST下午10时51分57秒] Maurizio Farina: i have a mac
+[CST下午10时52分00秒] 同光 张: yes
+[CST下午10时52分12秒] Maurizio Farina: maybe i can try
+[CST下午10时52分19秒] 同光 张: ok
+[CST下午10时52分36秒] Maurizio Farina: so you have criteria on android
+[CST下午10时52分45秒] 同光 张: ok
+[CST下午10时52分48秒] Maurizio Farina: you can execute task directly on device
+[CST下午10时52分52秒] Maurizio Farina: ahhaha nice
+[CST下午10时53分10秒] 同光 张: but  example is so simple
+[CST下午10时53分37秒] Maurizio Farina: in android
+[CST下午10时53分48秒] Maurizio Farina: so we can build a java wrapper to Criteria
+[CST下午10时53分53秒] Maurizio Farina: maybe to show a form
+[CST下午10时53分58秒] 同光 张: could you define a process in XPDL  similar to http://wiki.processmaker.com/3.0/CreateBPMNProcess10Minutes
+[CST下午10时54分07秒] 同光 张: yes
+[CST下午10时54分23秒] 同光 张: in the future  we will wrapper
+[CST下午10时54分37秒] Maurizio Farina: it's a simple process
+[CST下午10时54分42秒] Maurizio Farina: yes i can manage
+[CST下午10时54分58秒] Maurizio Farina: criteria is able to run that process
+[CST下午10时55分07秒] Maurizio Farina: with few changes
+[CST下午10时55分10秒] Maurizio Farina: on xml
+[CST下午10时55分15秒] Maurizio Farina: obviously
+[CST下午10时55分22秒] 同光 张: yes  ok
+[CST下午10时55分25秒] Maurizio Farina: have you seen one of process executed by Criteria
+[CST下午10时55分36秒] Maurizio Farina: for an old customer
+[CST下午10时55分43秒] 同光 张: no
+[CST下午10时55分55秒] Maurizio Farina: i can show you
+[CST下午10时55分56秒] 同光 张: i  need  very much
+[CST下午10时56分18秒] Maurizio Farina: you can open visio?
+[CST下午10时56分27秒] Maurizio Farina: otherwise i send you an image with xml
+[CST下午10时56分40秒] 同光 张: i  am using centos in machine
+[CST下午10时56分51秒] 同光 张: yes
+[CST下午10时57分15秒]  Maurizio Farina已发送文件ACEM.pdf。
+[CST下午10时57分18秒] Maurizio Farina: look at this
+[CST下午10时57分24秒] Maurizio Farina: several process
+[CST下午10时57分38秒] Maurizio Farina: exported from visio (you remember i use visio to design process)
+[CST下午10时57分47秒]  Maurizio Farina已发送文件AcquistoImpianti.xml, Acquisto.xml, VenditaImpianti.xml, RNIMEP.xml, InstallazioneMontaggio.xml, GestioneAnomalia.xml, AcquistoServizio.xml, AcquistoRiparazioni.xml。
+[CST下午10时57分56秒] Maurizio Farina: the same process in xml executed by criteria
+[CST下午10时58分11秒] Maurizio Farina: in that case
+[CST下午10时58分24秒] Maurizio Farina: the process update an external db used by customer
+[CST下午10时58分28秒] 同光 张: yes ,i  remember i use visio to design process
+[CST下午10时58分35秒] Maurizio Farina: so criteria execute process and update its db
+[CST下午10时58分41秒] Maurizio Farina: yes
+[CST下午10时58分57秒] Maurizio Farina: in Scenario there is a desktop app with visio embedded
+[CST下午10时59分26秒] Maurizio Farina: dont'worry about process
+[CST下午10时59分34秒] Maurizio Farina: Criteria is not able to execute bpmn2 process
+[CST下午10时59分39秒] Maurizio Farina: but complex bpmn2
+[CST下午10时59分45秒] Maurizio Farina: not simple process
+[CST下午11时00分08秒] 同光 张: yes , they are complex
+[CST下午11时00分28秒] Maurizio Farina: i hope to give Criteria a second life with your help
+[CST下午11时00分35秒] 同光 张: ok
+[CST下午11时00分42秒] 同光 张: i like
+[CST下午11时00分43秒] Maurizio Farina: is a project in which i have trusted for several years
+[CST下午11时00分58秒] Maurizio Farina: and a lot of effort
+[CST下午11时01分09秒] 同光 张: yes
+[CST下午11时01分36秒] 同光 张: if  can use  processmaker, it is better
+[CST下午11时01分55秒] 同光 张: use pm to design process
+[CST下午11时02分04秒] 同光 张: and manage processes
+[CST下午11时04分19秒] 同光 张: AcquistoRiparazioni.xml  Acquisto.xml          InstallazioneMontaggio.xml  VenditaImpianti.xml
+AcquistoImpianti.xml  AcquistoServizio.xml     GestioneAnomalia.xml  RNIMEP.xml
+[CST下午11时04分52秒] 同光 张: can these files execute by critera directly
+[CST下午11时07分53秒] 同光 张: i have a try
+[CST下午11时07分58秒] 同光 张:  later
+[CST下午11时10分12秒] 同光 张: could you send  Criteria.xml to me,
+[CST下午11时11分07秒]  Maurizio Farina已发送文件Criteria.xml。
+[CST下午11时11分21秒] 同光 张: have you signed in https://bitbucket.org/ ?
+[CST下午11时14分26秒] 同光 张: the Criteria.xml  is same to my Criteria.xml basically
+[CST下午11时14分44秒] 同光 张: only  ${CRITERIA_HOME}
+[CST下午11时14分52秒] 同光 张: %CRITERIA_HOME%
+[CST下午11时15分17秒] Maurizio Farina: yes uncomment the mysql section
+[CST下午11时15分46秒] 同光 张: use
+[CST下午11时15分46秒] Maurizio Farina: MySQL tag
+[CST下午11时15分47秒] 同光 张:     <MySQL Type="Primary" Id="1">
+[CST下午11时15分58秒] Maurizio Farina: and comment CriteriaFileSystem
+[CST下午11时16分09秒] 同光 张: i see
+[CST下午11时16分19秒] Maurizio Farina: so it's ok
+[CST下午11时16分31秒] Maurizio Farina: now prepare mysql to create criteria db
+[CST下午11时16分37秒] Maurizio Farina: and tables
+[CST下午11时17分44秒] 同光 张: for a while, i need to go back, maybe  23:30,  your time is 16:30
+[CST下午11时17分52秒] Maurizio Farina: ok
+[CST下午11时17分55秒] Maurizio Farina: i'm here
+[CST下午11时18分00秒] 同光 张: i have a test  tomorrow
+[CST下午11时19分56秒] 同光 张: in the phase of  design, use visio, but  ,  when customer use criteria,  do not use visio, is it?
+[CST下午11时20分14秒] 同光 张: only use  browser and  criteria
+[CST下午11时20分26秒] Maurizio Farina: yes
+[CST下午11时20分34秒] Maurizio Farina: visio was used onyl to design process
+[CST下午11时20分41秒] Maurizio Farina: and produce xml
+[CST下午11时20分52秒] Maurizio Farina: in production environment or better in customer environment
+[CST下午11时20分56秒] Maurizio Farina: just criteria and xml
+[CST下午11时21分08秒] Maurizio Farina: i had a asp,net application
+[CST下午11时21分35秒] Maurizio Farina: now we have to integrate criteria with in apache or to add a smal web server to Criteria
+[CST下午11时21分45秒] 同光 张: yes
+[CST下午11时21分47秒] Maurizio Farina: and write a small wrapper to use API
+[CST下午11时22分27秒] 同光 张: criteria as  a module of apache & lighttpd
+[CST下午11时23分25秒] Maurizio Farina: yes
+[CST下午11时23分44秒] Maurizio Farina: before i need to merge the code centos and windows
+[CST下午11时23分53秒] Maurizio Farina: and to study a little bit
+[CST下午11时25分34秒] 同光 张: can you now  study a little bit about php, then  port a simple example implemented by asp or c#   to centos implemented by php
+[CST下午11时25分53秒] Maurizio Farina: yes
+[CST下午11时25分56秒] Maurizio Farina: i'm on that
+[CST下午11时26分13秒] Maurizio Farina: i think xml process used by process maker are xml generated by Oryx
+[CST下午11时26分30秒] Maurizio Farina: so we have to modify xml used by Criteria to be compliant with Oryx
+[CST下午11时26分44秒] 同光 张: oh , maybe
+[CST下午11时26分46秒] 同光 张: yes
+[CST下午11时26分59秒] 同光 张:  i am not familiar with pm
+[CST下午11时27分11秒] 同光 张: maybe you are right
+[CST下午11时27分16秒] Maurizio Farina: me too
+[CST下午11时27分23秒] Maurizio Farina: but i see Oryx in their designer
+[CST下午11时27分31秒] Maurizio Farina: Oryx is possible to integrate in apache
+[CST下午11时27分36秒] Maurizio Farina: is just html/css/js
+[CST下午11时27分57秒] Maurizio Farina: i need:
+[CST下午11时28分05秒] Maurizio Farina: . repository on bitbucket
+[CST下午11时28分14秒] Maurizio Farina: . merge your code with code on codeplex
+[CST下午11时28分20秒] Maurizio Farina: . integrate Criteria in apache
+[CST下午11时28分25秒] Maurizio Farina: . change Criteria xml process
+[CST下午11时28分35秒] Maurizio Farina: those are my steps
+[CST下午11时29分02秒] 同光 张: yes
+[CST下午11时29分05秒] 同光 张: ok
+[CST下午11时30分44秒] 同光 张: i go back. see you tomorrow.
+[CST下午11时30分46秒] 同光 张: bye
+[CST下午11时30分56秒] Maurizio Farina: bye
+

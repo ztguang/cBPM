@@ -1,0 +1,73 @@
+<Applications>
+  
+	<Application Name="DocumentManager" Type="CriteriaExecutable" File="Scenario.DocumentManagement.Application">
+		<ExtendedAttributes>
+			<ExtendedAttribute Name="Type" Value="EXE"></ExtendedAttribute>
+		</ExtendedAttributes>
+		<Port>20100</Port>
+		<Host>127.0.0.1</Host>
+		<Functions>
+			<Function Name="GetNumberRow" Type="SCRIPT" >
+				<Parameters>
+					<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="Operator2" Type="NUMBER" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="NrRow" Type="INTEGER">
+						<Value>intero([Operator1]&#43;[Operator2])</Value>
+						</Parameter>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="CreateDocument">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="DocumentName" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="IdDocument" Type="STRING"></Parameter>	
+						<Parameter Name="DocumentVersion" Type="STRING"></Parameter>	
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="AttachFile">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="DocumentName" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="FilePath" Type="DirFop" Mandatory="YES"></Parameter>
+					<Parameter Name="FileName" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="FileExtension" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="Migrable" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+				</Result>
+			</Function>
+			<Function Name="ExportPCM2PDF">
+				<Parameters>
+					<Parameter Name="DocumentPath" Type="MillepianiDir" Mandatory="YES"></Parameter>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="DocumentName" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="ProcessId" Type="Number" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+				</Result>
+			</Function>
+			<Function Name="ExportPCM2PDFWithoutAttach">
+				<Parameters>
+					<Parameter Name="DocumentPath" Type="MillepianiDir" Mandatory="YES"></Parameter>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="ProcessId" Type="Number" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+				<Parameters>
+				<Parameter Name="Proposal" Type="STRING"></Parameter>	
+				</Parameters>
+				</Result>
+			</Function>
+			</Functions>
+	</Application>	
+	
+  
+</Applications>

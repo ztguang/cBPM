@@ -1,0 +1,98 @@
+<WorkflowProcess Name="TestNotePad">
+	<Description />
+	<Status />
+	<Activities>
+		<Activity Name="Start" Type="START">
+			<Description>Start Task</Description>
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity START for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity START for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity START for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+		</Activity>
+		<Activity Name="End" Type="END">
+			<Description>End Task</Description>
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity END for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity END for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity END for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="App1" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult">
+						<Function Name="one" Type="">
+							<Application>Criteria.Applications.StandAlone.Simple</Application>
+							<Parameters>
+								<Parameter Name="DIR_IN" Mandatory="NO" Type="STRING"><Bind></Bind><Value>Test1</Value></Parameter>
+								<Parameter Name="DIR_OUT" Mandatory="NO" Type="STRING"><Bind></Bind><Value>Test2</Value></Parameter>
+							</Parameters>
+							<Result Code="0">
+								<Message></Message>
+								<Parameters>
+									<Parameter Name="DIR_IN" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter>
+									<Parameter Name="DIR_OUT" Mandatory="NO" Type="STRING"><Bind>IdFNI</Bind><Value>[IdFNI]</Value></Parameter>
+								</Parameters>
+							</Result>
+						</Function>
+					</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+	</Activities>
+	<Transitions>
+		<Transition From="Start" To="App1">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="App1" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+	</Transitions>
+	<MessageFlows></MessageFlows>
+	<Attributes>
+		<Attribute Name="FileName1" Type="STRING" Direction="NONE">
+			<Value>c:\\temp\\prova2.txt</Value>
+		</Attribute>
+		<Attribute Name="NoteResult" Type="Number" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</WorkflowProcess>

@@ -1,0 +1,21 @@
+<Applications>
+  
+	<Application Name="FOP" Type="NativeExecutable" File="Fop.bat">
+		<Functions>
+			<Function Name="CreatePDF">
+				<Parameters>
+					<Parameter Name="DIR_IN" Type="DirFop" Mandatory="YES"></Parameter>
+					<Parameter Name="DIR_OUT" Type="DirFop" Mandatory="YES"></Parameter>
+					<Parameter Name="XML_FILE" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="XSL_FILE" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="PDF_FILE" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+					</Parameters>
+				</Result>
+			</Function>
+		</Functions>
+	</Application>
+
+</Applications>

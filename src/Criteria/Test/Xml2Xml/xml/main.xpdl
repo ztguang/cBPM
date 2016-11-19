@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciaomamma Id="1" Name="Richiesta Intervento" xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2004-04-24 16:33:51</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="UNDER_TEST">
+        <Responsibles>
+            <Responsible>Administrator</Responsible>
+        </Responsibles>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <Participants>
+        <Participant Id="MaurizioFarina" Name="Maurizio Farina">
+            <ParticipantType Type="HUMAN"/>
+        </Participant>
+        <Participant Id="DanieleDematteo" Name="Daniele Dematteo">
+            <ParticipantType Type="HUMAN"/>
+        </Participant>
+        <Participant Id="Administrator" Name="Administrator">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="CRITERIA" Name="CRITERIA">
+            <ParticipantType Type="SYSTEM"/>
+        </Participant>
+    </Participants>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="Main" Name="Main">
+            <ProcessHeader DurationUnit="Y">
+                <Created>2004-04-24 16:39:35</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="UNDER_TEST">
+                <Responsibles>
+                    <Responsible>Administrator</Responsible>
+                </Responsibles>
+            </RedefinableHeader>
+            <Activities>
+                <Activity Id="Main_Act1" Name="Verifica della Richiesta">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                    <StartMode>
+                        <Manual/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="170"/>
+                        <ExtendedAttribute Name="YOffset" Value="50"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="Main_Act2" Name="Acquisto">
+                    <Implementation>
+                        <SubFlow Execution="SYNCHR" Id="1_Wor2"/>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="290"/>
+                        <ExtendedAttribute Name="YOffset" Value="50"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="Main_Act1" Id="Main_Tra3" Name="Transition" To="Main_Act2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="Administrator;Main_Act1;90;50;SIMPLEROUTING"/>
+                <ExtendedAttribute Name="ParticipantVisualOrder" Value="Administrator;"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="1_Wor2" Name="Acquisto">
+            <ProcessHeader DurationUnit="D">
+                <Created>2004-04-24 16:48:49</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="UNDER_TEST">
+                <Responsibles>
+                    <Responsible>Administrator</Responsible>
+                </Responsibles>
+            </RedefinableHeader>
+            <DataFields>
+                <DataField Id="Verifica" IsArray="FALSE" Name="Verifica">
+                    <DataType>
+                        <BasicType Type="BOOLEAN"/>
+                    </DataType>
+                    <InitialValue>false</InitialValue>
+                </DataField>
+                <DataField Id="Verifica2" IsArray="FALSE" Name="Verifica2">
+                    <DataType>
+                        <BasicType Type="BOOLEAN"/>
+                    </DataType>
+                    <InitialValue>false</InitialValue>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="1_Wor3_Act1" Name="Split">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>CRITERIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="1_Wor2_Tra3"/>
+                                    <TransitionRef Id="1_Wor2_Tra2"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="CRITERIA"/>
+                        <ExtendedAttribute Name="XOffset" Value="120"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act2" Name="Verifica della Necessita">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                    <StartMode>
+                        <Manual/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="240"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act3" Name="Verifica della Necessita">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>MaurizioFarina</Performer>
+                    <StartMode>
+                        <Manual/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="MaurizioFarina"/>
+                        <ExtendedAttribute Name="XOffset" Value="240"/>
+                        <ExtendedAttribute Name="YOffset" Value="70"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act4" Name="Merge">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="1_Wor2_Tra7"/>
+                                    <TransitionRef Id="1_Wor2_Tra8"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="CRITERIA"/>
+                        <ExtendedAttribute Name="XOffset" Value="240"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                        <ExtendedAttribute Name="ACTION" Value="Verifica=0k aND Verifica2=ok"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act6" Name="Verifica della Disponibilità">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="1_Wor2_Tra9"/>
+                                    <TransitionRef Id="1_Wor2_Tra10"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="400"/>
+                        <ExtendedAttribute Name="YOffset" Value="70"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act7" Name="Emissione ordine di Acquisto">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="540"/>
+                        <ExtendedAttribute Name="YOffset" Value="70"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act8" Name="Notifica Ad Interessato">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>CRITERIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="CRITERIA"/>
+                        <ExtendedAttribute Name="XOffset" Value="540"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act9" Name="Ricevimento Merce">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Administrator</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="Administrator"/>
+                        <ExtendedAttribute Name="XOffset" Value="650"/>
+                        <ExtendedAttribute Name="YOffset" Value="70"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act10" Name="ExitOK">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>CRITERIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <Icon>C:\Programmi\Microsoft Visual Studio .NET 2003\Common7\Graphics\icons\Office\CRDFLE09.ICO</Icon>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="CRITERIA"/>
+                        <ExtendedAttribute Name="XOffset" Value="650"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="1_Wor2_Act11" Name="ExitNOK">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>CRITERIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="ParticipantID" Value="CRITERIA"/>
+                        <ExtendedAttribute Name="XOffset" Value="400"/>
+                        <ExtendedAttribute Name="YOffset" Value="40"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="1_Wor3_Act1" Id="1_Wor2_Tra2" Name="Transition" To="1_Wor2_Act2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="NOROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor3_Act1" Id="1_Wor2_Tra3" Name="Transition" To="1_Wor2_Act3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="NOROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act2" Id="1_Wor2_Tra4" Name="Transition" To="1_Wor2_Act4">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act3" Id="1_Wor2_Tra5" Name="Transition" To="1_Wor2_Act4">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act4" Id="1_Wor2_Tra7" Name="Transition" To="1_Wor2_Act11">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act4" Id="1_Wor2_Tra8" Name="Transition" To="1_Wor2_Act6">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="NOROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act6" Id="1_Wor2_Tra9" Name="Transition" To="1_Wor2_Act11">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act6" Id="1_Wor2_Tra10" Name="Transition" To="1_Wor2_Act7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="NOROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act7" Id="1_Wor2_Tra11" Name="Transition" To="1_Wor2_Act8">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act8" Id="1_Wor2_Tra12" Name="Transition" To="1_Wor2_Act9">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="NOROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="1_Wor2_Act9" Id="1_Wor2_Tra13" Name="Transition" To="1_Wor2_Act10">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="RoutingType" Value="SIMPLEROUTING"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="CRITERIA;1_Wor3_Act1;60;40;SIMPLEROUTING"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="CRITERIA;1_Wor2_Act10;650;130;SIMPLEROUTING"/>
+                <ExtendedAttribute Name="ParticipantVisualOrder" Value="Administrator;CRITERIA;MaurizioFarina;"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+    <ExtendedAttributes>
+        <ExtendedAttribute Name="MadeBy" Value="JaWE"/>
+        <ExtendedAttribute Name="Version" Value="1.2"/>
+    </ExtendedAttributes>
+</ciaomamma>

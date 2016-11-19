@@ -1,0 +1,85 @@
+<Applications>
+  
+  <!--
+  
+  Application useful to implement Criteria features to support business process development
+
+  * CriteriaComponent: useful to manage master/detail relationship between Process and n- SubProcess
+  * KPI: useful to implement kpi over process.
+
+  -->
+  
+  <Application Name="CriteriaComponent" Type="CriteriaLibrary" File="Criteria.Applications.Component">
+		<Functions>
+			<Function Name="MakeSlaves">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="NrSlaves" Type="INTEGER" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="GetSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="IdSlave" Type="INTEGER"></Parameter>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="ReleaseSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+					<Parameter Name="IdSlave" Type="INTEGER" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="AllReleased" Type="INTEGER" Mandatory="YES"></Parameter>
+					</Parameters>
+				</Result>
+			</Function>
+			<Function Name="NoSlave">
+				<Parameters>
+					<Parameter Name="IdMaster" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="AllReleased" Type="INTEGER" Mandatory="YES"></Parameter>
+					</Parameters>
+				</Result>
+			</Function>
+		</Functions>
+	</Application>
+
+  <Application Name="CriteriaKPI" Type="CriteriaLibrary" File="Criteria.Applications.KPI">
+    <Functions>
+      <Function Name="Start">
+        <Parameters>
+          <Parameter Name="ID" Type="INTEGER" Mandatory="YES" />
+          <Parameter Name="KPI" Type="STRING" Mandatory="YES" />
+          <Parameter Name="Value" Type="STRING" Mandatory="NO" />
+        </Parameters>
+        <Result>
+          <Parameters>
+          </Parameters>
+        </Result>
+      </Function>
+      <Function Name="Stop">
+        <Parameters>
+          <Parameter Name="ID" Type="INTEGER" Mandatory="YES" />
+          <Parameter Name="KPI" Type="STRING" Mandatory="YES" />
+          <Parameter Name="Value" Type="STRING" Mandatory="NO" />
+        </Parameters>
+        <Result>
+          <Parameters>
+          </Parameters>
+        </Result>
+      </Function>
+    </Functions>
+  </Application>
+
+</Applications>

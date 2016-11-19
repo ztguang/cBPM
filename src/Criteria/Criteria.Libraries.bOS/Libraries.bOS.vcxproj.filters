@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="String">
+      <UniqueIdentifier>{6a71ce34-5596-4bf0-b1c7-3adab368328e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{1e5a3286-fa1e-4ea8-9818-24be6029a2e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{fd0852a9-9607-4c84-8681-5a0f3452bf10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{40e56c39-78e1-4586-b687-4df40a194c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{8a47e3b7-409d-4a76-b3eb-30a15ce6dc5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{475bd750-786b-4362-9e7a-1c407df7296f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collections">
+      <UniqueIdentifier>{8032e86e-5af2-4401-a3e7-0bd48a709f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{d6130605-47eb-451a-be18-6efdd9d0ddc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CodeManager">
+      <UniqueIdentifier>{c0adb189-db74-4f25-a0bd-104d4e00f096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{675d4633-b4bd-46fb-b933-1fe7f346b2ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\XSLT">
+      <UniqueIdentifier>{b18af488-b3eb-4f62-867e-c96aa09db155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Data">
+      <UniqueIdentifier>{ee8f86a7-97b7-46ee-8726-7f1c8ac77e4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\Data\FileSystem">
+      <UniqueIdentifier>{1972a088-c493-480e-b869-aad696857e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL">
+      <UniqueIdentifier>{fe3c99e6-952d-41a4-a4c9-c66efcfe0f1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL\mySQL">
+      <UniqueIdentifier>{48302f1e-073a-49bc-9783-cca12369c3d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL\SQLite3">
+      <UniqueIdentifier>{f4f136e5-8335-4313-8da2-c65b24230815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL\SQLite3\3rdLibraries">
+      <UniqueIdentifier>{f4640cef-af45-4cb6-bf4e-2039fd4c888f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VM">
+      <UniqueIdentifier>{31e7bd63-f6b7-472c-a65c-c54e58033d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VM\Java">
+      <UniqueIdentifier>{8445713f-e695-4a6b-9e8c-d5b1269eda02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="String\bOSString.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="String\bOSStringBuffer.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="String\bOSStringUtils.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception\bOSException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\bOSMutex.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\bOSSemaphore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\bOSSmartLocker.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\bOSThread.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="System\bOSProcess.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\bOSSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\bOSDate.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\bOSDateTime.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\bOSTime.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\bOSTimer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\bOSUniqueID.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\bOSFile.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\bOSFileSystem.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\bOSCollection.cpp">
+      <Filter>Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\bOSCollectionEntry.cpp">
+      <Filter>Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\bOSSocketException.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\bOSSockets.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeManager\CodeItem.cpp">
+      <Filter>CodeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeManager\CodeTracer.cpp">
+      <Filter>CodeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeManager\Tracer.cpp">
+      <Filter>CodeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\bOSXMLAttribute.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\bOSXMLHelper.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\bOSXMLNode.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XSLT\bOSXSLTManager.cpp">
+      <Filter>XML\XSLT</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Data\bOSXMLObject.cpp">
+      <Filter>XML\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Data\bOSXMLObjectSet.cpp">
+      <Filter>XML\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Data\FileSystem\bOSXMLDirectory.cpp">
+      <Filter>XML\Data\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\Data\FileSystem\bOSXMLFile.cpp">
+      <Filter>XML\Data\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSResultSet.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSResultSetField.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSResultSetMetaData.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSResultSetRecord.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLCommand.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLCommands.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLConnection.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLConnectionManager.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLConnectionPool.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLField.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLSmartConnection.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\bOSSQLTable.cpp">
+      <Filter>SQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\mySQL\bOSmySQLConnection.cpp">
+      <Filter>SQL\mySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\mySQL\bOSmySQLConnectionData.cpp">
+      <Filter>SQL\mySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\mySQL\bOSmySQLResultSet.cpp">
+      <Filter>SQL\mySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\mySQL\bOSmySQLResultSetField.cpp">
+      <Filter>SQL\mySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\mySQL\bOSmySQLResultSetMetaData.cpp">
+      <Filter>SQL\mySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\bOSSQLiteConnection.cpp">
+      <Filter>SQL\SQLite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\bOSSQLiteConnectionData.cpp">
+      <Filter>SQL\SQLite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\bOSSQLiteResultSet.cpp">
+      <Filter>SQL\SQLite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\bOSSQLiteResultSetField.cpp">
+      <Filter>SQL\SQLite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\bOSSQLiteResultSetMetaData.cpp">
+      <Filter>SQL\SQLite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\3rdLibraries\CppSQLite3.cpp">
+      <Filter>SQL\SQLite3\3rdLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="SQL\SQLite3\3rdLibraries\sqlite3.c">
+      <Filter>SQL\SQLite3\3rdLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="JniInvoker.cpp">
+      <Filter>VM\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="bOS.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="String\bOSString.h">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="String\bOSStringBuffer.h">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="String\bOSStringUtils.h">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSAlreadyInitializedException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSDeadLockException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSFileSystemException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSNullArgumentException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSRuntimeException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception\bOSSynchronizationException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSMutex.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSRunnable.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSSemaphore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSSmartLocker.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSThread.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\bOSTypes.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="System\bOSProcess.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\bOSSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\bOSDate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\bOSDateTime.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\bOSTime.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\bOSTimer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\bOSUniqueID.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Io\bOSFile.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\bOSFileSystem.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\bOSCollection.h">
+      <Filter>Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\bOSCollectionEntry.h">
+      <Filter>Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\bOSSocketException.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\bOSSockets.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeManager\CodeItem.h">
+      <Filter>CodeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeManager\CodeTracer.h">
+      <Filter>CodeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeManager\Tracer.h">
+      <Filter>CodeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\bOSXMLAttribute.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\bOSXMLException.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\bOSXMLHelper.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\bOSXMLNode.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XSLT\bOSXSLTException.h">
+      <Filter>XML\XSLT</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XSLT\bOSXSLTManager.h">
+      <Filter>XML\XSLT</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Data\bOSXMLObject.h">
+      <Filter>XML\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Data\bOSXMLObjectSet.h">
+      <Filter>XML\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Data\FileSystem\bOSXMLDirectory.h">
+      <Filter>XML\Data\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\Data\FileSystem\bOSXMLFile.h">
+      <Filter>XML\Data\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSResultSet.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSResultSetColumn.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSResultSetField.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSResultSetMetaData.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSResultSetRecord.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLCommand.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLCommands.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLConnection.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLConnectionData.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLConnectionManager.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLConnectionPool.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLException.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLField.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLSmartConnection.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\bOSSQLTable.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\mySQL\bOSmySQLConnection.h">
+      <Filter>SQL\mySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\mySQL\bOSmySQLConnectionData.h">
+      <Filter>SQL\mySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\mySQL\bOSmySQLResultSet.h">
+      <Filter>SQL\mySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\mySQL\bOSmySQLResultSetField.h">
+      <Filter>SQL\mySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\mySQL\bOSmySQLResultSetMetaData.h">
+      <Filter>SQL\mySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\bOSSQLiteConnection.h">
+      <Filter>SQL\SQLite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\bOSSQLiteConnectionData.h">
+      <Filter>SQL\SQLite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\bOSSQLiteResultSet.h">
+      <Filter>SQL\SQLite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\bOSSQLiteResultSetField.h">
+      <Filter>SQL\SQLite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\bOSSQLiteResultSetMetaData.h">
+      <Filter>SQL\SQLite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\3rdLibraries\CppSQLite3.h">
+      <Filter>SQL\SQLite3\3rdLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\3rdLibraries\sqlite3.h">
+      <Filter>SQL\SQLite3\3rdLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="SQL\SQLite3\3rdLibraries\sqlite3ext.h">
+      <Filter>SQL\SQLite3\3rdLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="JniInvoker.h">
+      <Filter>VM\Java</Filter>
+    </ClInclude>
+    <ClInclude Include="bOS.h" />
+    <ClInclude Include="bOSHp.h" />
+    <ClInclude Include="bOSSolaris.h" />
+    <ClInclude Include="bOSWin32.h" />
+    <ClInclude Include="CommonDefines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.build" />
+    <None Include="TODO.txt" />
+  </ItemGroup>
+</Project>

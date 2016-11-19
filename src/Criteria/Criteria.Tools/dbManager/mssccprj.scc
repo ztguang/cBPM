@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[dbManager.vcproj]
+SCC_Aux_Path = "\\testserver\VSSafe\scenario"
+SCC_Project_Name = "$/Scenario 1.0/Scenario/src/AdminTools/dbManager", WICDAAAA

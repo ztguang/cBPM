@@ -1,0 +1,83 @@
+<Applications>
+  
+	<Application Name="MathFunctions" Type="CriteriaLibrary" File="MathFunctions">
+	<Functions>
+		<Function Name="Add">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+				<Parameter Name="Operator2" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Sub">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+				<Parameter Name="Operator2" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Mul">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+				<Parameter Name="Operator2" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Div">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+				<Parameter Name="Operator2" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Sqrt">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Pot">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+				<Parameter Name="Operator2" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+		<Function Name="Int">
+			<Parameters>
+				<Parameter Name="Operator1" Type="STRING" Mandatory="YES"></Parameter>
+			</Parameters>
+			<Result>
+				<Parameters>
+					<Parameter Name="Result" Type="STRING"></Parameter>
+				</Parameters>
+			</Result>
+		</Function>
+	</Functions>
+	</Application>
+
+</Applications>

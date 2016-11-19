@@ -1,0 +1,335 @@
+<WorkflowProcess Name="AcquistoServizio">
+	<Description></Description>
+	<ParentProcess>0</ParentProcess>
+	<Status></Status>
+	<ProcessId>0</ProcessId>
+	<Activities>
+		<Activity Name="Start" Type="START">
+			<Description>Start Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity START for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity START for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity START for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="ODA" Type="API">
+			<Description>ODA</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="ARM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="ARM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateODA" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[ODA]]></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdODA</Bind><Value>[IdODA]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="RDO" Type="API">
+			<Description>RDO</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="ARM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="ARM">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateRDO" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>RDO</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdRDO</Bind><Value>[IdRDO]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MakeOrder" Type="CONDITION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="CONDITION">
+					<Script Type="EVAL_EXPRESSION" DataType="OrderManagement">*(%1%@==@%1%)%OrderManagement%%OrderManagement%*</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="End" Type="END">
+			<Description>End Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity END for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity END for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity END for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="LCA" Type="API">
+			<Description>LCA</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="IMP">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="IMP">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CreateLCA" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument" Type=""><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[IdDocument]</Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[LCA]]></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdLCA</Bind><Value>[IdLCA]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+	</Activities>
+	<Transitions>
+		<Transition From="CreateODA" To="ODA">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CreateRDO" To="RDO">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="Start" To="MakeOrder">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MakeOrder" To="CreateODA">
+			<Result>MakeODA</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="MakeOrder" To="CreateLCA">
+			<Result>MakeLCA</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="MakeOrder" To="CreateRDO">
+			<Result>MakeRDO</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="ODA" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="CreateLCA" To="LCA">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="LCA" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="RDO" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+	</Transitions>
+	<Attributes>
+		<Attribute Name="IdDocument" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdLCA" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdODA" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="IdRDO" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="OrderManagement" Type="OrderManagement" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="ProcessAlias" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="User" Type="Partecipants" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</WorkflowProcess>

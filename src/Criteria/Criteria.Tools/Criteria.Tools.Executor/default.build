@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="Executor" default="copy2reference" basedir="." xmlns="http://nant.sf.net/release/0.90/nant.xsd">
+
+  <property name="ScenarioDirectory" value="${environment::get-variable('WF_HOME')}" />
+  <property name="CriteriaTestDirectory" value="${ScenarioDirectory}/TestEnvironment" />
+  <property name="CriteriaReferenceDirectory" value="${ScenarioDirectory}/reference/Criteria"/>
+
+  <target name="default" description ="">
+    <call target="copy2reference" verbose="true" />
+    <call target="debugging" verbose="true" />
+  </target>
+
+  <target name="copy2reference" description="myCopy">
+
+    <echo message="CriteriaReferenceDirectory: ${CriteriaReferenceDirectory}"/>
+    <echo message="BuildDir: ${builddir}"/>
+    <echo message="ProjectName: ${ProjectName}" />
+
+    <copy todir="${CriteriaReferenceDirectory}" overwrite="true" verbose="true" flatten="true">
+      <fileset>
+        <include name="${builddir}/${ProjectName}*.exe" />
+      </fileset>
+    </copy>
+
+
+  </target>
+
+</project>

@@ -1,0 +1,5 @@
+XML 
+	* Compilare con pugixml (linkare la libreria staticamente)
+	
+SQL
+	* E' da modificare in quanto al momento è complicata da manutenere

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+  <Application Name="Criteria.Applications.StandAlone.Simple" Type="NativeExecutable" File="Criteria.Applications.StandAlone.SimpleD.exe">
+    
+    <Port>20100</Port>
+    <Host>127.0.0.1</Host>
+    
+    <Functions>
+      <Function Name="one">
+        <Parameters>
+          <Parameter Name="DIR_IN" Type="String" Mandatory="YES"></Parameter>
+          <Parameter Name="DIR_OUT" Type="String" Mandatory="YES"></Parameter>
+        </Parameters>
+        <Result>
+          <Parameters>
+          </Parameters>
+        </Result>
+      </Function>
+      <Function Name="two">
+        <Parameters>
+          <Parameter Name="DIR_IN" Type="String" Mandatory="YES"></Parameter>
+          <Parameter Name="DIR_OUT" Type="String" Mandatory="YES"></Parameter>
+        </Parameters>
+        <Result>
+          <Parameters>
+          </Parameters>
+        </Result>
+      </Function>
+    </Functions>
+  </Application>

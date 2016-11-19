@@ -1,0 +1,79 @@
+<Users>
+	<User Key="scenario">
+		<Name>scenario</Name>
+		<Description>scenario</Description>
+		<Password>scenario</Password>
+		<DisplayName>scenario</DisplayName>
+		<Email>info@proandpro.it</Email>
+	</User>
+	<User Key="celentano">
+		<Name>celentano</Name>
+		<Description>celentano</Description>
+		<Password>ce</Password>
+		<DisplayName>celentano</DisplayName>
+		<Email>m.farina@proandpro.it</Email>
+	</User>
+	<User Key="e.vitale">
+		<Name>Enrico Vitale</Name>
+		<Description>Direzione</Description>
+		<Password>91140</Password>
+		<DisplayName>Direzione</DisplayName>
+		<Email>e.vitale@acemascensori.it</Email>
+	</User>
+	<User Key="r.vitale">
+		<Name>Ranieri Vitale</Name>
+		<Description>Qualita</Description>
+		<Password>030872</Password>
+		<DisplayName>Qualita</DisplayName>
+		<Email>r.vitale@acemascensori.it</Email>
+	</User>
+	<User Key="g.vitale">
+		<Name>Gianluca Vitale</Name>
+		<Description>Progettazione</Description>
+		<Password>180873</Password>
+		<DisplayName>Progettazione</DisplayName>
+		<Email>g.vitale@acemascensori.it</Email>
+	</User>
+	<User Key="e.pane">
+		<Name>Enrico Pane</Name>
+		<Description>Commerciale</Description>
+		<Password>ziozucchino</Password>
+		<DisplayName>Commerciale</DisplayName>
+		<Email>e.pane@acemascensori.it</Email>
+	</User>
+	<User Key="a.pastore">
+		<Name>Aniello Pastore</Name>
+		<Description>Tecnico</Description>
+		<Password>150256</Password>
+		<DisplayName>Tecnico</DisplayName>
+		<Email>a.pastore@acemascensori.it</Email>
+	</User>
+	<User Key="s.esposito">
+		<Name>Sara Esposito</Name>
+		<Description>Segrteria</Description>
+		<Password>4062005</Password>
+		<DisplayName>Segrteria</DisplayName>
+		<Email>s.esposito@acemascensori.it</Email>
+	</User>
+	<User Key="a.santacroce">
+		<Name>Anna Santacroce</Name>
+		<Description>Segrteria</Description>
+		<Password>anna</Password>
+		<DisplayName>Segrteria</DisplayName>
+		<Email>a.santacroce@acemascensori.it</Email>
+	</User>
+	<User Key="r.manna">
+		<Name>r.manna</Name>
+		<Description>r.manna</Description>
+		<Password>22021973</Password>
+		<DisplayName>manna</DisplayName>
+		<Email>r.manna@acemascensori.it</Email>
+	</User>
+	<User Key="m.farina">
+		<Name>m.farina</Name>
+		<Description>m.farina</Description>
+		<Password>zerozero</Password>
+		<DisplayName>Maurizio Farina</DisplayName>
+		<Email>m.farinia@proandpro.it</Email>
+	</User>
+</Users>

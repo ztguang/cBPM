@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="bOS" default="copy" basedir=".">
+
+	<property name="NOW" value="${datetime::now()}" />
+	<property name="debug" value="true" overwrite="false" />
+	<property name="builddir" value="bin\Debug" />
+	
+    <description>bOS Core Library</description>
+    
+    <target name="copy" description="myCopy">
+    
+    	<copy todir="${environment::get-variable('WF_HOME')}\src\reference\Libraries\lib" overwrite="true" verbose="true" flatten="true">
+			<fileset>
+				<include name="${builddir}/bOS*.lib" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${environment::get-variable('WF_HOME')}\src\reference\Libraries\bin" overwrite="true" verbose="true" flatten="true">
+			<fileset>
+				<include name="${builddir}/bOS*.dll" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${environment::get-variable('WF_HOME')}\src\reference\Libraries\include\bOS" flatten="true" 
+				overwrite="true">
+			<fileset>
+				<include name="./*.h" />
+				<include name="Collections/*.h" />
+        <include name="Network/*.h" />
+        <include name="CodeManager/*.h" />
+				<include name="Core/*.h" />
+				<include name="Exception/*.h" />
+				<include name="IO/*.h" />
+				<include name="String/*.h" />
+				<include name="System/*.h" />
+				<include name="Utils/*.h" />
+        <include name="XML/Data/FileSystem/*.h" />
+        <include name="XML/Data/*.h" />
+        <include name="XML/XSLT/*.h" />
+        <include name="XML/*.h" />
+        <include name="SQL/*.h" />
+        <include name="SQL/mySQL/*.h" />
+        
+        
+				
+				<exclude name="CommonDefines.h" />
+			</fileset>
+			<!--filterchain>
+				<replacetokens>
+					<token key="NOW" value="${TODAY}" />
+				</replacetokens>
+				<tabstospaces />
+			</filterchain-->
+		</copy>
+    </target>
+</project>

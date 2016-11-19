@@ -1,0 +1,586 @@
+<WorkflowProcess Name="GestioneAnomalia">
+	<Description></Description>
+	<ParentProcess>0</ParentProcess>
+	<Status></Status>
+	<ProcessId>0</ProcessId>
+	<Activities>
+		<Activity Name="Start" Type="START">
+			<Description>Start Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity START for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity START for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity START for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="End" Type="END">
+			<Description>End Task</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity END for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity END for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity END for the Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="IdAM" Type="APPLICATION">
+			<Description>Chiama ValueHelper</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="" Type="EXECUTION">
+					<Users></Users>
+					<Roles></Roles>
+				</Grant>
+			</Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="CreateDocument"><Application>DocumentManager</Application><Parameters><Parameter Name="IdMaster" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="DocumentName" Mandatory="NO" Type="STRING"><Bind></Bind><Value>Anomalia</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters><Parameter Name="DocumentVersion" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[]</Value></Parameter><Parameter Name="IdDocument" Mandatory="NO" Type="STRING"><Bind>IdAM</Bind><Value>[IdAM]</Value></Parameter></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="ServiceNotStarted" Type="API">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="" Type="EXECUTION">
+					<Users></Users>
+					<Roles></Roles>
+				</Grant>
+			</Grants>
+			<Attributes>
+				<Attribute Name="ActivityAlias" Type="" Direction="NONE">
+					<Value>Servizio non partito</Value>
+				</Attribute>
+				<Attribute Name="WFMS_ASSIGN_TO" Type="STRING" Direction="NONE">
+					<Value>[User]</Value>
+				</Attribute>
+				<Attribute Name="WFMS_FEATURE" Type="STRING" Direction="NONE">
+					<Value>NOTIFY</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="CAM" Type="API">
+			<Description>Inserimento dati anomalia</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes>
+				<Attribute Name="ActivityAlias" Type="STRING" Direction="NONE">
+					<Value>Configurazione Dati Anomalie</Value>
+				</Attribute>
+				<Attribute Name="HelpUrl" Type="STRING" Direction="NONE">
+					<Value>~/Guide/Millepiani/AM/CAM/CAM.htm</Value>
+				</Attribute>
+				<Attribute Name="WFMS_ASSIGN_TO" Type="STRING" Direction="NONE">
+					<Value>[User]</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="StatusManage_act" Type="CONDITION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="" Type="EXECUTION">
+					<Users></Users>
+					<Roles></Roles>
+				</Grant>
+			</Grants>
+			<Attributes>
+				<Attribute Name="Execution" Type="SubflowExecution" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+				<Attribute Name="Occurency" Type="Number" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+				<Attribute Name="ProcessName" Type="WorkflowProcesses" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="CONDITION">
+					<Script Type="EVAL_EXPRESSION" DataType="BOOLEAN">*(%StatusManage%@==@%1%)%1%%0%*</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="SendMailCreated" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="SendHTML" Type=""><Application>SMTPHelper</Application><Parameters><Parameter Name="To" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[CustomerEmail]</Value></Parameter><Parameter Name="Cc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Bcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Subject" Mandatory="NO" Type="EmailSubject"><Bind></Bind><Value>[BodyCreate]</Value></Parameter><Parameter Name="Body" Mandatory="NO" Type="EmailBody"><Bind></Bind><Value>[BodyCreate]</Value></Parameter><Parameter Name="Attach" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MAS" Type="API">
+			<Description>Iinserimento trattamenti in corso</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="YES" Type="EXECUTION">
+					<Users></Users>
+					<Roles>
+						<Role Key="GQ">
+							<Name></Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+				<Grant Enabled="YES" Type="VISIBLE">
+					<Users></Users>
+					<Roles>
+						<Role Key="GQ">
+							<Name>GQ</Name>
+							<Description></Description>
+							<Users></Users>
+						</Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			<Attributes>
+				<Attribute Name="ActivityAlias" Type="STRING" Direction="NONE">
+					<Value>Gestione e trattamento delle anomalie</Value>
+				</Attribute>
+				<Attribute Name="HelpUrl" Type="STRING" Direction="NONE">
+					<Value>~/Guide/ACEM/AM/MAS/MAS.htm</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="TechRequest_act" Type="CONDITION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants>
+				<Grant Enabled="" Type="EXECUTION">
+					<Users></Users>
+					<Roles></Roles>
+				</Grant>
+			</Grants>
+			<Attributes>
+				<Attribute Name="Execution" Type="SubflowExecution" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+				<Attribute Name="Occurency" Type="Number" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+				<Attribute Name="ProcessName" Type="WorkflowProcesses" Direction="INPUT">
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="CONDITION">
+					<Script Type="EVAL_EXPRESSION" DataType="BOOLEAN">*(%TechRequest%@==@%1%)%1%%0%*</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="TASM" Type="API">
+			<Description>Trattamento parte della direzione operativa</Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes>
+				<Attribute Name="ActivityAlias" Type="STRING" Direction="NONE">
+					<Value>Gestione Tenica e trattamento delle anomalie</Value>
+				</Attribute>
+				<Attribute Name="HelpUrl" Type="STRING" Direction="NONE">
+					<Value>~/Guide/ACEM/AM/TASM/TASM.htm</Value>
+				</Attribute>
+				<Attribute Name="WFMS_ASSIGN_TO" Type="STRING" Direction="NONE">
+					<Value>[SupportUser]</Value>
+				</Attribute>
+			</Attributes>
+			<Behaviour>
+				<Start Mode="MANUAL" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="MANUAL">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="MANUAL" Type="API">
+					<Script Type="API_SYNCH" DataType="OK-KO">[NONE]</Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MailRoleGQ" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="SendHTML" Type=""><Application>SMTPHelper</Application><Parameters><Parameter Name="To" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Cc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Bcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[]]></Value></Parameter><Parameter Name="UserCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[GQ]]></Value></Parameter><Parameter Name="RoleCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Subject" Mandatory="NO" Type="EmailSubject"><Bind></Bind><Value>[AvvisoInterno]</Value></Parameter><Parameter Name="Body" Mandatory="NO" Type="EmailBody"><Bind></Bind><Value>[AvvisoInterno]</Value></Parameter><Parameter Name="Attach" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="MailRoleUT" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="SendHTML" Type=""><Application>SMTPHelper</Application><Parameters><Parameter Name="To" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Cc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Bcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[SupportUser]</Value></Parameter><Parameter Name="UserCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Subject" Mandatory="NO" Type="EmailSubject"><Bind></Bind><Value>[AvvisoInternoUT]</Value></Parameter><Parameter Name="Body" Mandatory="NO" Type="EmailBody"><Bind></Bind><Value>[AvvisoInternoUT]</Value></Parameter><Parameter Name="Attach" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="SendMailUpdate" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="SendHTML" Type=""><Application>SMTPHelper</Application><Parameters><Parameter Name="To" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[CustomerEmail]</Value></Parameter><Parameter Name="Cc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Bcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Subject" Mandatory="NO" Type="EmailSubject"><Bind></Bind><Value>[BodyUpdate]</Value></Parameter><Parameter Name="Body" Mandatory="NO" Type="EmailBody"><Bind></Bind><Value>[BodyUpdate]</Value></Parameter><Parameter Name="Attach" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="SendMailComplete" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="NO">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="SendHTML" Type=""><Application>SMTPHelper</Application><Parameters><Parameter Name="To" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[CustomerEmail]</Value></Parameter><Parameter Name="Cc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Bcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="UserBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleTo" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleCc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="RoleBcc" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter><Parameter Name="Subject" Mandatory="NO" Type="EmailSubject"><Bind></Bind><Value>[BodyCompleted]</Value></Parameter><Parameter Name="Body" Mandatory="NO" Type="EmailBody"><Bind></Bind><Value>[BodyCompleted]</Value></Parameter><Parameter Name="Attach" Mandatory="NO" Type="STRING"><Bind></Bind><Value></Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="StartKPI" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="StartKPI" Type=""><Application>CriteriaComponent</Application><Parameters><Parameter Name="ID" Mandatory="NO" Type="INTEGER"><Bind></Bind><Value>[IdAM]</Value></Parameter><Parameter Name="KPI" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[DURATA]]></Value></Parameter><Parameter Name="Value" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[ProcessAlias]</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+		<Activity Name="StopKPI" Type="APPLICATION">
+			<Description></Description>
+			<ProcessId>0</ProcessId>
+			<CatchType></CatchType>
+			<ReferenceActivity></ReferenceActivity>
+			<Grants></Grants>
+			<Attributes></Attributes>
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report></Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report></Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="APPLICATION">
+					<Script Type="APPLICATION" DataType="ApplicationResult"><Function Name="StopKPI" Type=""><Application>CriteriaComponent</Application><Parameters><Parameter Name="ID" Mandatory="NO" Type="INTEGER"><Bind></Bind><Value>[IdAM]</Value></Parameter><Parameter Name="KPI" Mandatory="NO" Type="STRING"><Bind></Bind><Value><![CDATA[DURATA]]></Value></Parameter><Parameter Name="Value" Mandatory="NO" Type="STRING"><Bind></Bind><Value>[ProcessAlias]</Value></Parameter></Parameters><Result Code="0"><Message></Message><Parameters></Parameters></Result></Function></Script>
+					<Report></Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+	</Activities>
+	<Transitions>
+		<Transition From="Start" To="IdAM">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="IdAM" To="ServiceNotStarted">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>NotEqual</Operator>
+		</Transition>
+		<Transition From="IdAM" To="StartKPI">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="CAM" To="SendMailCreated">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="SendMailCreated" To="MailRoleGQ">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MAS" To="StatusManage_act">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="StatusManage_act" To="StopKPI">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="StatusManage_act" To="TechRequest_act">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>NotEqual</Operator>
+		</Transition>
+		<Transition From="TechRequest_act" To="MailRoleUT">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>NotEqual</Operator>
+		</Transition>
+		<Transition From="TASM" To="MAS">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="TechRequest_act" To="SendMailUpdate">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Equal</Operator>
+		</Transition>
+		<Transition From="SendMailComplete" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="SendMailUpdate" To="MAS">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="ServiceNotStarted" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MailRoleGQ" To="MAS">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="MailRoleUT" To="TASM">
+			<Result>Zero</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="StartKPI" To="CAM">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="StopKPI" To="SendMailComplete">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="SendMailCreated" To="MAS">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+	</Transitions>
+	<Attributes>
+		<Attribute Name="AnomalyCause" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="AnomalyDate" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="AnomalyDescription" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="AnomalyManagement" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="CustomerEmail" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="ExternalAnomaly" Type="STRING" Direction="NONE">
+			<Value>1</Value>
+		</Attribute>
+		<Attribute Name="IdAM" Type="STRING" Direction="NONE">
+			<Value>Anomalia</Value>
+		</Attribute>
+		<Attribute Name="LastManage" Type="STRING" Direction="NONE">
+			<Value>NONE</Value>
+		</Attribute>
+		<Attribute Name="ProcessAlias" Type="STRING" Direction="INPUTOUTPUT">
+			<Value>Gestione Anomalia</Value>
+		</Attribute>
+		<Attribute Name="Progetto" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="ReportsSent" Type="XML" Direction="NONE">
+			<Value><Reports></Reports></Value>
+		</Attribute>
+		<Attribute Name="StatusManage" Type="STRING" Direction="NONE">
+			<Value>NONE</Value>
+		</Attribute>
+		<Attribute Name="SupportUser" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+		<Attribute Name="TechRequest" Type="STRING" Direction="NONE">
+			<Value>NONE</Value>
+		</Attribute>
+		<Attribute Name="User" Type="STRING" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</WorkflowProcess>

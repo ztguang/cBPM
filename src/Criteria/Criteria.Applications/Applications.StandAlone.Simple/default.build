@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project name="Executor" default="default" basedir="." xmlns="http://nant.sf.net/release/0.90/nant.xsd">
+
+  <property name="ScenarioDirectory" value="${environment::get-variable('WF_HOME')}" />
+  <property name="CriteriaTestDirectory" value="${environment::get-variable('CRITERIA_HOME')}" />
+  <property name="CriteriaReferenceDirectory" value="${ScenarioDirectory}/reference/Criteria"/>
+
+  <target name="default" description ="">
+    <call target="copy2reference" verbose="true" />
+    <call target="debugging" verbose="true" />
+  </target>
+
+  <target name="copy2reference" description="myCopy">
+
+    <echo message="CriteriaReferenceDirectory: ${CriteriaReferenceDirectory}"/>
+    <echo message="BuildDir: ${builddir}"/>
+    <echo message="ProjectName: ${ProjectName}" />
+
+    <copy todir="${CriteriaReferenceDirectory}" overwrite="true" verbose="true" flatten="true">
+      <fileset>
+        <include name="${builddir}/${ProjectName}*.exe" />
+      </fileset>
+    </copy>
+
+
+  </target>
+
+  <target name="debugging" description="Used only to semplify debug" >
+
+    <echo message="CriteriaTestDirectory: ${CriteriaTestDirectory}"/>
+
+    <copy todir="${CriteriaTestDirectory}" overwrite="true" verbose="true" flatten="true">
+
+      <fileset>
+        <include name="${builddir}/${ProjectName}*.exe" />
+        <include name="${ProjectName}*.xml" />
+        <include name="${CriteriaReferenceDirectory}/Criteria.Applications.ApplicationHelper*.dll" />
+        <include name="${CriteriaReferenceDirectory}/Criteria.Libraries.bOS*.dll" />
+        <include name="${CriteriaReferenceDirectory}/Criteria.WorkflowEngine*.dll" />
+      </fileset>
+
+    </copy>
+
+    <echo message="deleting trace file" />
+
+    <delete>
+      <fileset>
+        <include name="${CriteriaTestDirectory}/*-*.trace" />
+      </fileset>
+    </delete>
+
+  </target>
+
+</project>

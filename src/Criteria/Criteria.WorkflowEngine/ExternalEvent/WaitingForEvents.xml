@@ -1,0 +1,12 @@
+<Events>
+	<WaitingEvent id="StartUp">
+
+		<WaitingActivities>
+			<WaitingActivity ProcessId="" Name="" DateTime="">
+				<Managed DateTime="" Status="Managed|Unmanaged|Managing"></Managed>
+			</WaitingActivity>						
+		</WaitingActivities>
+
+	</WaitingEvent>
+
+</Events>

@@ -1,0 +1,29 @@
+<DataTypes>
+	<DataType Key='ApplicationWAPI' Type='INTEGER'>
+		 <Description>ApplicationWAPI</Description>
+		 <EnumerationValues>
+		 	<Value Key="OK">0</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='RepairType' Type='INTEGER'>
+		 <Description>RepairType</Description>
+		 <EnumerationValues>
+		 	<Value Key="Phone">0</Value>
+			<Value Key="Network">1</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='Approved' Type='INTEGER'>
+		 <Description>Approved</Description>
+		 <EnumerationValues>
+		 	<Value Key="Yes">1</Value>
+			<Value Key="No">0</Value>
+		 </EnumerationValues>
+	</DataType>
+	<DataType Key='Repaired' Type='INTEGER'>
+		 <Description>Repaired</Description>
+		 <EnumerationValues>
+		 	<Value Key="Yes">1</Value>
+			<Value Key="No">0</Value>
+		 </EnumerationValues>
+	</DataType>
+</DataTypes>

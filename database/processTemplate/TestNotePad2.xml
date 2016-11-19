@@ -1,0 +1,112 @@
+<WorkflowProcess Name="TestNotePad">
+	<Description />
+	<Status />
+
+	<Activities>
+		<Activity Name="Start" Type="START">
+			<Description>Start Task</Description>
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity START for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity START for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity START for Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+		</Activity>
+
+		<Activity Name="End" Type="END">
+			<Description>End Task</Description>
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity END for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity END for Process [WorkflowProcess.Name] ENDED </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="IMPLEMENTATION">
+					<Script Type="NONE" DataType="NONE">[NONE]</Script>
+					<Report>Activity END for Process [WorkflowProcess.Name] IN EXECUTION</Report>
+				</Execution>
+			</Behaviour>
+			<Log Owner="" Result="" Status="" Date=""></Log>
+		</Activity>
+
+		<Activity Name="NotePad1" Type="API">
+			<Description></Description>
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity NotePad1 for Process [WorkflowProcess.Name] STARTED </Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity NotePad1 for Process [WorkflowProcess.Name] Finish </Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="API">
+<!--					<Script Type="API_SYNCH" DataType="BOOLEAN">^?NoteResult?@c:\\WINDOWS\\notepad.exe@%FileName1%^</Script>
+-->
+					<Script Type="API_SYNCH" DataType="BOOLEAN">^?NoteResult?@gedit@%FileName1%^</Script>
+					<Report>Activity NotePad1 for Process [WorkflowProcess.Name] Execution </Report>
+				</Execution>
+			</Behaviour>
+		</Activity>
+
+		<Activity Name="NotePad2" Type="API">
+			<Description />
+			<Grants />
+			<Attributes />
+			<Behaviour>
+				<Start Mode="AUTOMATIC" OnlyOne="YES">
+					<Report>Activity NotePad2 for Process [WorkflowProcess.Name] STARTED</Report>
+				</Start>
+				<Finish Mode="AUTOMATIC">
+					<Report>Activity NotePad2 for Process [WorkflowProcess.Name] Finish</Report>
+				</Finish>
+				<Execution Mode="AUTOMATIC" Type="API">
+<!--					<Script Type="API_SYNCH" DataType="BOOLEAN">^?NoteResult?@c:\\WINDOWS\\notepad.exe@%FileName1%^</Script>
+-->
+					<Script Type="API_SYNCH" DataType="BOOLEAN">^?NoteResult?@gedit@%FileName1%^</Script>
+					<Report>Activity NotePad2 for Process [WorkflowProcess.Name] Execution</Report>
+				</Execution>
+			</Behaviour>
+		</Activity>
+	</Activities>
+
+	<Transitions>
+		<Transition From="Start" To="NotePad1">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="NotePad1" To="NotePad2">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+		<Transition From="NotePad2" To="End">
+			<Result>[None]</Result>
+			<ReExec>YES</ReExec>
+			<Operator>Always</Operator>
+		</Transition>
+	</Transitions>
+	<MessageFlows></MessageFlows>
+	<Attributes>
+		<Attribute Name="FileName1" Type="STRING" Direction="NONE">
+<!--			<Value>c:\\temp\\prova2.txt</Value>		-->
+			<Value>/opt/cBPM/criteria-lin/bin/Criteria/Debug/Tools.Executor/notepad.txt</Value>
+
+		</Attribute>
+		<Attribute Name="NoteResult" Type="Number" Direction="NONE">
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</WorkflowProcess>

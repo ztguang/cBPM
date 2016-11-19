@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Criteria.WorkflowEngine" />
+		<Option execution_dir="/opt/cBPM/criteria-lin/bin/Criteria/Debug/WorkflowEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release Win32">
+				<Option output="/opt/cBPM/criteria-lin/bin/Criteria/Debug/WorkflowEngine/WorkflowEngineD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_USRDLL" />
+					<Add option="-DENGINE_EXPORTS" />
+					<Add option="-D_CODEMANAGER_TRACE_ON_" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add directory="$(WF_REFERENCE)/Libraries/include" />
+					<Add directory="." />
+					<Add directory="./dll" />
+					<Add directory="./actions" />
+					<Add directory="./datamodel" />
+					<Add directory="./engine" />
+					<Add directory="./engine/DataType" />
+					<Add directory="./events" />
+					<Add directory="./tasks" />
+					<Add directory="./inc" />
+					<Add directory="$(WF_REFERENCE)/Scenario/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(WF_REFERENCE)/Libraries/include" />
+					<Add directory="." />
+					<Add directory="./dll" />
+					<Add directory="./actions" />
+					<Add directory="./datamodel" />
+					<Add directory="./engine" />
+					<Add directory="./engine/DataType" />
+					<Add directory="./events" />
+					<Add directory="./tasks" />
+					<Add directory="./inc" />
+					<Add directory="$(WF_REFERENCE)/Scenario/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="cppScenario.WorkflowEngine.DataBase" />
+					<Add library="cppScenario.WorkflowEngine.EngineDataTypes" />
+					<Add library="bOS" />
+					<Add library="bOSXML" />
+					<Add library="CodeManager" />
+					<Add library="cppScenario.WorkflowEngine.DataModel" />
+					<Add library="cppScenario.WorkflowEngine.Idioma" />
+					<Add library="SmtpLibrary" />
+					<Add library="cppScenario.WorkflowEngine.Application.ApplicationManager" />
+					<Add library="cppScenario.WorkflowEngine.Application.DataModel" />
+					<Add library="cppScenario.WorkflowEngine.Event.EventsManager" />
+					<Add library="cppScenario.WorkflowEngine.Event.DataModel" />
+					<Add directory="$(WF_REFERENCE)/Libraries/lib" />
+					<Add directory="$(WF_REFERENCE)/Scenario/lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="nant.bat -D:builddir=.\bin\Release" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Win32">
+				<Option output="../../../bin/Criteria/Debug/WorkflowEngine/WorkflowEngineD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../../bin/Criteria/Debug/WorkflowEngine" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-fPIC" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_USRDLL" />
+					<Add option="-DENGINE_EXPORTS" />
+					<Add option="-DWAPI_EXPORTS" />
+					<Add option="-D_CODEMANAGER_TRACE_ON_" />
+					<Add option="-D_USE_SQLITE3_" />
+					<Add option="-DBOS_EXPORTS" />
+					<Add directory="/opt/cBPM/criteria-lin/include/WorkflowEngine" />
+					<Add directory="/opt/cBPM/criteria-lin/include/bOS" />
+					<Add directory="/opt/cBPM/criteria-lin/include/" />
+					<Add directory="/usr/include" />
+				</Compiler>
+				<ExtraCommands>
+					<Add after="cp /opt/cBPM/criteria-lin/bin/Criteria/Debug/WorkflowEngine/libWorkflowEngineD.so /opt/cBPM/criteria-lin/lib" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Unit filename="Application/Application.cpp" />
+		<Unit filename="Application/ApplicationException.cpp" />
+		<Unit filename="Application/ApplicationFunction.cpp" />
+		<Unit filename="Application/ApplicationFunctionResult.cpp" />
+		<Unit filename="Application/ApplicationFunctions.cpp" />
+		<Unit filename="Application/ApplicationManager.cpp" />
+		<Unit filename="Application/Applications.cpp" />
+		<Unit filename="Application/FunctionExecution.cpp" />
+		<Unit filename="Application/LibraryFunctionExecution.cpp" />
+		<Unit filename="Application/ProcessFunctionExecution.cpp" />
+		<Unit filename="Application/SQLApplicationDataModelDefines.cpp" />
+		<Unit filename="Application/ScriptFunctionExecution.cpp" />
+		<Unit filename="Application/SocketFunctionExecution.cpp" />
+		<Unit filename="Application/XMLApplicationDataModelDefines.cpp" />
+		<Unit filename="CommonDefines.cpp" />
+		<Unit filename="DataBase/Activities.cpp" />
+		<Unit filename="DataBase/Activity.cpp" />
+		<Unit filename="DataBase/ActivityComponent.cpp" />
+		<Unit filename="DataBase/Attribute.cpp" />
+		<Unit filename="DataBase/Attributes.cpp" />
+		<Unit filename="DataBase/Behaviour.cpp" />
+		<Unit filename="DataBase/BehaviourBase.cpp" />
+		<Unit filename="DataBase/BehaviourExecution.cpp" />
+		<Unit filename="DataBase/BehaviourFinish.cpp" />
+		<Unit filename="DataBase/BehaviourStart.cpp" />
+		<Unit filename="DataBase/Connection.cpp" />
+		<Unit filename="DataBase/Connections.cpp" />
+		<Unit filename="DataBase/DataBase.cpp" />
+		<Unit filename="DataBase/DataBaseHelper.cpp" />
+		<Unit filename="DataBase/DataBaseObject.cpp" />
+		<Unit filename="DataBase/DataBaseObjectManager.cpp" />
+		<Unit filename="DataBase/DataBaseTemplate.cpp" />
+		<Unit filename="DataBase/DataType.cpp" />
+		<Unit filename="DataBase/DataTypeValue.cpp" />
+		<Unit filename="DataBase/DataTypeValues.cpp" />
+		<Unit filename="DataBase/DataTypes.cpp" />
+		<Unit filename="DataBase/ExtendedAttribute.cpp" />
+		<Unit filename="DataBase/ExtendedAttributes.cpp" />
+		<Unit filename="DataBase/FileSystemConnection.cpp" />
+		<Unit filename="DataBase/FileSystemDataBase.cpp" />
+		<Unit filename="DataBase/FormalParameter.cpp" />
+		<Unit filename="DataBase/FormalParametes.cpp" />
+		<Unit filename="DataBase/Grant.cpp" />
+		<Unit filename="DataBase/Grants.cpp" />
+		<Unit filename="DataBase/HowTo.txt" />
+		<Unit filename="DataBase/Log.cpp" />
+		<Unit filename="DataBase/Logs.cpp" />
+		<Unit filename="DataBase/Message.cpp" />
+		<Unit filename="DataBase/Messages.cpp" />
+		<Unit filename="DataBase/ODBCConnection.cpp" />
+		<Unit filename="DataBase/PoolManager.cpp" />
+		<Unit filename="DataBase/ProcessComponent.cpp" />
+		<Unit filename="DataBase/ProcessesHandler.cpp" />
+		<Unit filename="DataBase/Report.cpp" />
+		<Unit filename="DataBase/Reports.cpp" />
+		<Unit filename="DataBase/Role.cpp" />
+		<Unit filename="DataBase/Roles.cpp" />
+		<Unit filename="DataBase/SQLDataBaseDefines.cpp" />
+		<Unit filename="DataBase/SQLiteConnection.cpp" />
+		<Unit filename="DataBase/Script.cpp" />
+		<Unit filename="DataBase/Service.cpp" />
+		<Unit filename="DataBase/Services.cpp" />
+		<Unit filename="DataBase/Status.cpp" />
+		<Unit filename="DataBase/TODO.txt" />
+		<Unit filename="DataBase/Transition.cpp" />
+		<Unit filename="DataBase/Transitions.cpp" />
+		<Unit filename="DataBase/User.cpp" />
+		<Unit filename="DataBase/Users.cpp" />
+		<Unit filename="DataBase/WorkflowProcess.cpp" />
+		<Unit filename="DataBase/WorkflowProcessInstanceRepository.cpp" />
+		<Unit filename="DataBase/XMLDataModelDefines.cpp" />
+		<Unit filename="DataBase/database.sql" />
+		<Unit filename="DataBase/mySQLConnection.cpp" />
+		<Unit filename="ExternalEvent/Event.cpp" />
+		<Unit filename="ExternalEvent/EventActions.cpp" />
+		<Unit filename="ExternalEvent/EventConsumerPolicy.cpp" />
+		<Unit filename="ExternalEvent/EventContext.cpp" />
+		<Unit filename="ExternalEvent/EventInvocationPolicy.cpp" />
+		<Unit filename="ExternalEvent/EventPolicies.cpp" />
+		<Unit filename="ExternalEvent/EventSource.cpp" />
+		<Unit filename="ExternalEvent/Events.cpp" />
+		<Unit filename="ExternalEvent/Events.xml" />
+		<Unit filename="ExternalEvent/EventsDefinition.cpp" />
+		<Unit filename="ExternalEvent/EventsManager.cpp" />
+		<Unit filename="ExternalEvent/ManagedEventElement.cpp" />
+		<Unit filename="ExternalEvent/OccurredEvent.cpp" />
+		<Unit filename="ExternalEvent/OccurredEvents.xml" />
+		<Unit filename="ExternalEvent/ScenarioEventAction.cpp" />
+		<Unit filename="ExternalEvent/WaitingActivities.cpp" />
+		<Unit filename="ExternalEvent/WaitingActivity.cpp" />
+		<Unit filename="ExternalEvent/WaitingEvent.cpp" />
+		<Unit filename="ExternalEvent/WaitingForEvents.xml" />
+		<Unit filename="ExternalEvent/XMLEventDataModelDefines.cpp" />
+		<Unit filename="HowTo.txt" />
+		<Unit filename="Idioma/Condition.cpp" />
+		<Unit filename="Idioma/Evaluator.cpp" />
+		<Unit filename="Idioma/Expression.cpp" />
+		<Unit filename="Idioma/FreeText.cpp" />
+		<Unit filename="Idioma/Function.cpp" />
+		<Unit filename="Idioma/ItemInterface.cpp" />
+		<Unit filename="Idioma/Keyword.cpp" />
+		<Unit filename="Idioma/Parameter.cpp" />
+		<Unit filename="WAPI/Logger.cpp" />
+		<Unit filename="WAPI/WAPI.cpp" />
+		<Unit filename="WAPI/WAPIActivity.cpp" />
+		<Unit filename="WAPI/WAPIApplication.cpp" />
+		<Unit filename="WAPI/WAPIDataBase.cpp" />
+		<Unit filename="WAPI/WAPIDataType.cpp" />
+		<Unit filename="WAPI/WAPIForms.cpp" />
+		<Unit filename="WAPI/WAPIProcess.cpp" />
+		<Unit filename="WAPI/WAPIReport.cpp" />
+		<Unit filename="WAPI/WAPIRole.cpp" />
+		<Unit filename="WAPI/WAPIService.cpp" />
+		<Unit filename="WAPI/WAPIUser.cpp" />
+		<Unit filename="WAPI/WAPIWorkItem.cpp" />
+		<Unit filename="WAPI/WAPIWorkflow.cpp" />
+		<Unit filename="actions/ApplicationFunctionAction.cpp" />
+		<Unit filename="actions/ApplicationFunctionActionAttach.cpp" />
+		<Unit filename="actions/BaseAction.cpp" />
+		<Unit filename="actions/ConditionAction.cpp" />
+		<Unit filename="actions/ConsumeEventAction.cpp" />
+		<Unit filename="actions/EvalExpressionAction.cpp" />
+		<Unit filename="actions/EvalRetrieveParameter.cpp" />
+		<Unit filename="actions/EventAction.cpp" />
+		<Unit filename="actions/IterationAction.cpp" />
+		<Unit filename="actions/IterationCounterAction.cpp" />
+		<Unit filename="actions/IterationExpressionAction.cpp" />
+		<Unit filename="actions/MakeEventAction.cpp" />
+		<Unit filename="actions/PrimitiveAction.cpp" />
+		<Unit filename="actions/PrimitiveActionAttach.cpp" />
+		<Unit filename="actions/PrimitiveActionDetach.cpp" />
+		<Unit filename="actions/ProcessAction.cpp" />
+		<Unit filename="actions/ProcessActionAttach.cpp" />
+		<Unit filename="actions/SubFlowExitAction.cpp" />
+		<Unit filename="actions/XMLAction.cpp" />
+		<Unit filename="actions/XMLActionXMLFile.cpp" />
+		<Unit filename="actions/XMLActionXSLT.cpp" />
+		<Unit filename="default.build" />
+		<Unit filename="engine/Engine.cpp" />
+		<Unit filename="engine/EventsManagerThread.cpp" />
+		<Unit filename="engine/IDataType.cpp" />
+		<Unit filename="engine/IWorkflow.cpp" />
+		<Unit filename="engine/NaturalType.cpp" />
+		<Unit filename="engine/WorkFlowThread.cpp" />
+		<Unit filename="engine/Workflow.cpp" />
+		<Unit filename="engine/WorkflowManager.cpp" />
+		<Unit filename="engine/WorkflowReport.cpp" />
+		<Unit filename="events/BaseEvent.cpp" />
+		<Unit filename="events/BaseProcessEvent.cpp" />
+		<Unit filename="events/BaseWorkflowEvent.cpp" />
+		<Unit filename="events/CreatedProcessEvent.cpp" />
+		<Unit filename="events/CreatingProcessEvent.cpp" />
+		<Unit filename="events/EndWorkflowEvent.cpp" />
+		<Unit filename="events/ErrorWorkflowEvent.cpp" />
+		<Unit filename="events/EventListener.cpp" />
+		<Unit filename="events/EventMaker.cpp" />
+		<Unit filename="events/ManualWorkflowEvent.cpp" />
+		<Unit filename="events/RestartedWorkflowEvent.cpp" />
+		<Unit filename="events/StartedWorkflowEvent.cpp" />
+		<Unit filename="events/StartingWorkflowEvent.cpp" />
+		<Unit filename="events/WorkflowListener.cpp" />
+		<Unit filename="tasks/ApplicationFunctionTask.cpp" />
+		<Unit filename="tasks/BaseTask.cpp" />
+		<Unit filename="tasks/BeginTask.cpp" />
+		<Unit filename="tasks/ConditionTask.cpp" />
+		<Unit filename="tasks/EventTask.cpp" />
+		<Unit filename="tasks/LoopTask.cpp" />
+		<Unit filename="tasks/PrimitiveTask.cpp" />
+		<Unit filename="tasks/ProcessTask.cpp" />
+		<Unit filename="tasks/SubFlowExitTask.cpp" />
+		<Unit filename="tasks/XMLTask.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

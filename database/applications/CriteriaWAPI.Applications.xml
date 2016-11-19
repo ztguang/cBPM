@@ -1,0 +1,19 @@
+<Applications>
+  
+	<Application Name="ApplicationWAPI" Type="CriteriaLibrary" File="ApplicationWAPI">
+		<Functions>
+			<Function Name="PrepareProcess">
+				<Parameters>
+					<Parameter Name="Workflow" Type="STRING" Mandatory="YES"></Parameter>
+				</Parameters>
+				<Result>
+					<Parameters>
+						<Parameter Name="ProcessID" Type="INTEGER" Mandatory="YES"></Parameter>
+					</Parameters>
+				</Result>
+			</Function>
+		</Functions>
+	</Application>
+
+	
+</Applications>

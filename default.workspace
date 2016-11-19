@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="src/Criteria/Criteria.Libraries.bOS/Libraries.bOS.cbp" />
+		<Project filename="src/Criteria/Criteria.WorkflowEngine/WorkflowEngine.cbp" />
+		<Project filename="src/Criteria/Criteria.Tools/Criteria.Tools.Executor/Tools.Executor.cbp">
+			<Depends filename="src/Criteria/Criteria.Libraries.bOS/Libraries.bOS.cbp" />
+			<Depends filename="src/Criteria/Criteria.WorkflowEngine/WorkflowEngine.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>

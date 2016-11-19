@@ -1,0 +1,10 @@
+<DataTypes>
+	<DataType Key='CriteriaComponent' Type='INTEGER'>
+		 <Description>CriteriaComponent</Description>
+		 <EnumerationValues>
+		 	<Value Key="OK">0</Value>
+		 	<Value Key="NoMoreSlave">1</Value>
+		 	<Value Key="ERROR">1000</Value>
+		 </EnumerationValues>
+	</DataType>
+</DataTypes>
