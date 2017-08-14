@@ -1,2 +1,0 @@
-_ADD_EVENTS_MANAGER_H_:
-	Macro per abilitare nel codice la gestione degli eventi.

@@ -1,8 +1,0 @@
-sulla connessione primaria lo user e la password, essendo quelle di scenario, non andrebbero indicate.
-la password andrebbe comunque criptata.
-
-Se vengono criptate allora è possibile inserire anche lo user/password di scenario.
-
-E' possibile per le tabelle di look-up specificare per i campi l'enumerazione dei possibili valori.
-
-mySQL consente di eseguire le insert multiple.
