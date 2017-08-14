@@ -1,0 +1,8 @@
+<DataTypes>
+	<DataType Key='SMTPHelper' Type='INTEGER'>
+		 <Description>OrderManager</Description>
+		 <EnumerationValues>
+		 	<Value Key="OK">0</Value>
+		 </EnumerationValues>
+	</DataType>
+</DataTypes>

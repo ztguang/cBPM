@@ -1,0 +1,1 @@
+Per compilare SQLite3 è suffiente definre la macro _USE_SQLITE3_ 

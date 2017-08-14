@@ -1,0 +1,243 @@
+#include "bOSString.h"
+#include "bOSStringBuffer.h"
+using namespace bOS::CoreString;
+
+#include "Tracer.h"
+
+#include "bOSTimer.h"
+
+#include "WAPI.h"
+#include "WAPIActivity.h"
+#include "WAPIWorkItem.h"
+#include "WAPIProcess.h"
+
+#include "Activity.h"
+
+//ztg add, use fcgi
+#include "fcgi_stdio.h"
+
+//ztg add, use fcgi
+int main_fcgi( char* proc_name, int argc=2);
+//ztg add, use fcgi
+int main(void)
+{
+    //main_fcgi("TestNotePad");
+    //*
+	while (FCGI_Accept() >= 0) {
+
+		char *proc_name = getenv("QUERY_STRING");
+
+		printf("Content type: text/html\n\n");
+		//printf("%s",proc_name);
+		//main_fcgi("TestNotePad");
+		main_fcgi(proc_name);
+
+	}  //*/
+}
+
+
+
+static void usage()
+{
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s", "\nUsage:\n"
+			"	CriteriaToolsExecutor <WorkflowName> [NrExecution]\n\n"
+			"This program invokes criteria workflow engine and execute <WorkflowName>\n"
+			"Options:\n"
+			"	NrExecution		the number of process execution. Default is 1\n");
+/*
+	cout << "\nUsage:\n"
+			"	CriteriaToolsExecutor <WorkflowName> [NrExecution]\n\n"
+			"This program invokes criteria workflow engine and execute <WorkflowName>\n"
+			"Options:\n"
+			"	NrExecution		the number of process execution. Default is 1\n"
+	<< endl;
+*/
+}
+
+
+//ztg alter, use fcgi
+//int main(int argc, char* argv[])
+int main_fcgi( char* proc_name, int argc)
+{
+	if ( argc == 1 )
+	{
+		usage();
+		exit(1);
+	}
+
+	String sWorkflowName;
+	if ( argc >= 2 )
+	{
+	    //ztg alter, use fcgi
+		//sWorkflowName = argv[1];
+		sWorkflowName = proc_name;
+	}
+
+	unsigned int uiSize =1;
+	if ( argc == 3 )
+	{
+	    //ztg del, use fcgi
+		//uiSize = atoi(argv[2]);
+	}
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s", "The program will perform the following steps:\n\n"
+				"1: Criteria session initialization (only one time)\n"
+				"	----- for each process (begin) -----\n"
+				"2: Create process instance from template\n"
+				"3: Execute process instance just created\n"
+				"	----- for each process (end) -----\n"
+				"4: Querying for activity pending\n"
+				"5: close criteria session\n\n");
+
+/*
+	cout << "The program will perform the following steps:\n\n"
+				"1: Criteria session initialization (only one time)\n"
+				"	----- for each process (begin) -----\n"
+				"2: Create process instance from template\n"
+				"3: Execute process instance just created\n"
+				"	----- for each process (end) -----\n"
+				"4: Querying for activity pending\n"
+				"5: close criteria session\n\n";
+*/
+    //ztg del, use fcgi
+	//cout << "Press a Key for beginning................................................" << endl;
+	//getchar();
+
+	Response* response = new Response();
+	response->iCode= 0;
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "Criteria session Initialization.....(look at Executor trace file)");
+	//cout << "Criteria session Initialization.....(look at Executor trace file)" << endl;
+
+	CM_SETTING_TO("Executor", 7);
+	InitSession(response);
+	if ( response->iCode != 0 )
+	{
+		//ztg alter, use fcgi, not use cout, instead of using printf
+		printf("Criteria session Initialization [KO].Error[ %s ]. Exit.\n", response->sMsg);
+		//cout << "Criteria session Initialization [KO].Error[" << response->sMsg << "]. Exit." << endl;
+		exit(2);
+	}
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "Criteria session Initialization [OK]");
+	//cout << "Criteria session Initialization [OK]" << endl;
+
+	bOS::Utils::Timer tExecutionTimer;
+	tExecutionTimer.start();
+
+	char* lProcessId = new char[50];
+	//char* acRet = NULL;
+
+	StringBuffer outputSimplified;
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "Create process instance from template");
+	//cout << "Create process instance from template" << endl;
+	for ( unsigned int i=0; i<uiSize; i++)
+	{
+		bOS::Utils::Timer tTot;
+		bOS::Utils::Timer tCreate;
+		bOS::Utils::Timer tStart;
+
+		tTot.start();
+
+		tCreate.start();
+		createWorkflowProcess((char*)sWorkflowName.c_str(), lProcessId, response);
+		tCreate.stop();
+
+		if ( response->iCode == 0 )
+		{
+			//cout << "Create process instance [OK]. Process Instance Id[" << lProcessId << "]" << endl;
+			tStart.start();
+			startProcessInSynchWay(lProcessId, response);
+			tStart.stop();
+			tTot.stop();
+
+			if ( response->iCode == 0 )
+			{
+				//cout << "Execute process instance [OK]. Process Instance Id[" << lProcessId << "] just started" << endl;
+
+				//ztg alter, use fcgi, not use cout, instead of using printf
+				printf("[ %u ] Process [ %d ] [ %d ] [ %d ] [ %d ]\n", i, lProcessId, tCreate.getTicks(), tStart.getTicks(), tTot.getTicks());
+				//cout << "[" << i << "] Process [" << lProcessId << "] [" << tCreate.getTicks() << "] [" << tStart.getTicks() << "] [" << tTot.getTicks() << "]" << endl;
+			}
+			else
+			{
+				//ztg alter, use fcgi, not use cout, instead of using printf
+				printf("Execute process instance [KO]. Process Instance Id[ %s ]\n", lProcessId);
+				//cout << "Execute process instance [KO]. Process Instance Id[" << lProcessId << "] not started" << endl;
+			}
+		}
+		else
+		{
+			//ztg alter, use fcgi, not use cout, instead of using printf
+			printf("Create process instance [KO]. Err[ %s ]\n", response->sMsg);
+			//cout << "Create process instance [KO]. Err[" << response->sMsg << "]" << endl;
+		}
+
+
+	}
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "Querying for activity pending");
+	//cout << "Querying for activity pending" << endl;
+
+	unsigned long lWorkflowRunning=0;
+	do
+	{
+		lWorkflowRunning= getNumberRunningWorkflow(response);
+		if ( response->iCode == 0 )
+		{
+			//ztg alter, use fcgi, not use cout, instead of using printf
+			printf("WorkflowRunning[ %lu ]\n", lWorkflowRunning);
+			//cout << "WorkflowRunning[" << lWorkflowRunning << "]" << endl;
+		}
+		else
+		{
+			//ztg alter, use fcgi, not use cout, instead of using printf
+			printf("Error retreiving RunningWorkflow.Err[ %s ]\n", response->sMsg);
+			//cout << "Error retreiving RunningWorkflow.Err[" << response->sMsg << "]" << endl;
+		}
+	}
+	while ( lWorkflowRunning > 0);
+
+	tExecutionTimer.stop();
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("Execution Time(ms): %d\n", tExecutionTimer.getTicks());
+	//cout << "Execution Time(ms): " << tExecutionTimer.getTicks() << endl;
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "Press a Key for terminating................................................");
+	//cout << "Press a Key for terminating................................................" << endl;
+	//getchar();
+	//ztg add sleep()
+	//sleep(2);
+
+
+	//ztg alter, use fcgi, not use cout, instead of using printf
+	printf("%s\n", "EndSession.......");
+	//cout << "EndSession......." << endl;
+
+	response->iCode = 0;
+	EndSession(response);
+	if ( response->iCode == 0 )
+	{
+		//ztg alter, use fcgi, not use cout, instead of using printf
+		printf("%s\n", "Session Terminated [OK]");
+		//cout << "Session Terminated [OK]" << endl;
+	}
+	else
+	{
+		//ztg alter, use fcgi, not use cout, instead of using printf
+		printf("Terminating [KO].Err[ %s ]\n", response->sMsg);
+		//cout << "Terminating [KO].Err[" << response->sMsg << "]" << endl;
+	}
+//
+
+	return 0;
+}
+

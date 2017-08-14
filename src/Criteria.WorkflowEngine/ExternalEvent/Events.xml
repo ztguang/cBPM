@@ -1,0 +1,86 @@
+<EventsDefinition>
+
+	<Context Name="WFMS">
+	
+		<Context Name="System">
+		
+			<Events>
+			
+				<Event id="StartUp">
+				
+					<Parameters>
+							<Parameter Name=""></Parameter>
+							<Parameter Name=""></Parameter>
+							<Parameter Name=""></Parameter>
+					</Parameters>
+					
+					<Actions>
+						<Action Id="1" Type="ProcessExecute">[ProcessName]</Action>
+					</Actions>
+					
+					<Policies>
+						<ConsumerPolicy Type="YES|NO|NUMBER">[number]</ConsumerPolicy>
+						<InvocationPolicy Type="ONDEMAND|TIME|LOOP|DATE">[sleepTime]|[Date]</InvocationPolicy>
+					</Policies>
+					
+				</Event>
+				
+			</Events>
+			
+			<Grants>
+				<Grant Enabled="YES" Type="Invocation">
+					<Users>
+						<User KEY="mfarina"></User>
+					</Users>
+					<Roles>
+						<Role KEY="Administrator"></Role>
+					</Roles>
+				</Grant>
+			</Grants>
+			
+		</Context>
+		
+		<Context Name="Workflow">
+		
+			<Events>
+			
+				<Event id="Start">
+				</Event>
+				<Event id="End">
+				</Event>
+				<Event id="Restart">
+				</Event>
+				<Event id="Suspend">
+				</Event>
+				
+			</Events>
+			
+		</Context>
+		
+	</Context>
+	
+	<Context Name="User">
+	
+		<Events>
+		...
+		</Events>
+	
+		<Context Name="1">
+
+			<Events>
+			...
+			</Events>
+		
+			<Context Name="2">
+			
+				<Events>
+				...
+				</Events>
+
+			</Context>
+			
+		</Context>
+		
+	</Context>
+
+</EventsDefinition>

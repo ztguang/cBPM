@@ -1,0 +1,73 @@
+<Preventivo Idpreventivo="123" IdCliente="123" IdConsegna="123" IdPagamento="123" IdCorriere="123" IdVenditore="123" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\mySoftware\Scenario\src\Applications\Repository\FopApplication\exit.xsd">
+	<DatiGenerali>
+		<DataPreventivo>14/05/2005</DataPreventivo>
+		<Venditore>Paperino</Venditore>
+		<Cliente>Pluto</Cliente>
+		<Consegna>16/05/2005</Consegna>
+		<Pagamento>Contanti</Pagamento>
+		<Cantiere>Archimede Inc.</Cantiere>
+		<NoteConsegna>Contattare il portiere per la mazzetta</NoteConsegna>
+	</DatiGenerali>
+	<DatiTecniciGenerali>
+		<TipoImpianto>1</TipoImpianto>
+		<NAccessi>2</NAccessi>
+		<NFermate>3</NFermate>
+		<NServizi>4</NServizi>
+		<NPersone>5</NPersone>
+		<Portata>6</Portata>
+		<Testata>7</Testata>
+		<Vano>8&amp;</Vano>
+		<Fossa>9</Fossa>
+		<NImpianto>10</NImpianto>
+		<Disegno>11</Disegno>
+		<NormaImpianto>12</NormaImpianto>
+		<Precablato>13</Precablato>
+		<Legge13>14</Legge13>
+		<Velocita>13</Velocita>
+		<Corsa>14</Corsa>
+	</DatiTecniciGenerali>
+	<DettaglioOrdine>
+		<Meccanica>
+			<MainEntity Name="Cabina">
+				<NoEntity Name="Descrizione" Order="10">Cabinacentoducati</NoEntity>
+				<NoEntity Name="Prezzo" Order="1">500,5</NoEntity>
+				<NoEntity Name="CabinaQuantita" Order="8">1</NoEntity>
+				<NoEntity Name="CabinaSconto" Order="7">10</NoEntity>
+				<SubEntity Name="Celino" Order="6">
+					<NoEntity Name="Descrizione" Order="1">CabinaSimply</NoEntity>
+					<NoEntity Name="Prezzo" Order="2">678,5</NoEntity>
+					<NoEntity Name="CielinoQuantita" Order="3">3</NoEntity>
+					<NoEntity Name="CielinoSconto" Order="4">10</NoEntity>
+				</SubEntity>
+			<MainEntity>
+		</Meccanica>
+		<Elettrica>
+			<MainEntity Name="Cabina">
+				<NoEntity Name="Descrizione" Order="10">Cabinacentoducati</NoEntity>
+				<NoEntity Name="Prezzo" Order="1">500,5</NoEntity>
+				<NoEntity Name="CabinaQuantita" Order="8">500,5</NoEntity>
+				<NoEntity Name="CabinaSconto" Order="7">500,5</NoEntity>
+				<SubEntity Name="Celino" Order="6">
+					<NoEntity Name="Descrizione" Order="1">CabinaSimply</NoEntity>
+					<NoEntity Name="Prezzo" Order="2">678,5</NoEntity>
+					<NoEntity Name="CielinoQuantita" Order="3">Value</NoEntity>
+					<NoEntity Name="CielinoSconto" Order="4">value</NoEntity>
+				</SubEntity>
+			</MainEntity>
+		</Elettrica>
+		<Idraulica>
+			<MainEntity Name="Cabina">
+				<NoEntity Name="Descrizione" Order="10">Cabinacentoducati</NoEntity>
+				<NoEntity Name="Prezzo" Order="1">500,5</NoEntity>
+				<NoEntity Name="CabinaQuantita" Order="8">500,5</NoEntity>
+				<NoEntity Name="CabinaSconto" Order="7">500,5</NoEntity>
+				<SubEntity Name="Celino" Order="6">
+					<NoEntity Name="Descrizione" Order="1">CabinaSimply</NoEntity>
+					<NoEntity Name="Prezzo" Order="2">678,5</NoEntity>
+					<NoEntity Name="CielinoQuantita" Order="3">Value</NoEntity>
+					<NoEntity Name="CielinoSconto" Order="4">value</NoEntity>
+				</SubEntity>
+			</MainEntity>
+		</Idraulica>
+	</DettaglioOrdine>
+</Preventivo>
