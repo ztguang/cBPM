@@ -12,7 +12,7 @@ cBPM is used to design Mobile Information Systems in MANETs
 
 The original author, Maurizio Farina, is responsible for Windows version of cBPM.
 
-	https://github.com/mwzero/Criteria/
+	https://github.com/mwzero/Criteria
 	https://github.com/mwzero/Criteria.Web
 	http://criteria.codeplex.com/releases/view/93445 (Codeplex will be shut down soon)
 	
